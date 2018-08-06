@@ -15,6 +15,11 @@
 
   &--submit {
     position: absolute;
+
+    &--small {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
 
   &--carousel {
@@ -69,6 +74,9 @@
       &:after {
         background-color: $col-primary;
       }
+    }
+    &--small {
+      top: -0.5rem;
     }
   }
 }
