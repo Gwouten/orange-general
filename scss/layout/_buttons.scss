@@ -1,0 +1,74 @@
+.btn {
+  background: url(../assets/img/arrow.svg) center center no-repeat;
+  background-size: contain;
+  border: 1px solid $col-white;
+  border-radius: 1000px;
+  cursor: pointer;
+  // display: inline-block;
+  height: 3.8rem;
+  transition: transform 0.3s;
+  width: 3.8rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &--submit {
+    position: absolute;
+  }
+
+  &--carousel {
+    height: 2rem;
+    width: 2rem;
+    @include screen(tab-port) {
+      height: 3.8rem;
+      width: 3.8rem;
+    }
+  }
+
+  &--discover {
+    float: none;
+    display: inline-block;
+    @include screen(tab-port) {
+      float: right;
+    }
+  }
+
+  &--input-reset {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 5.2rem;
+
+    &:before,
+    &:after {
+      @include center;
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 2px;
+      background-color: $col-med-grey;
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: background-color 0.2s;
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        background-color: $col-secondary;
+      }
+    }
+
+    &:active {
+      &:before,
+      &:after {
+        background-color: $col-primary;
+      }
+    }
+  }
+}

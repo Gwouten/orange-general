@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  position: relative;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: $font-nav;
+  min-height: 100vh;
+  @include screen(tab-port) {
+    font-size: 1.4rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+main {
+  padding-top: 7.5rem;
+  @include screen(tab-port) {
+    padding-top: 0;
+    animation: fade-in 0.5s 0.75s forwards;
+    opacity: 0;
+    z-index: 10;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: currentColor;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $col-secondary;
+  }
+}
+ul {
+  list-style: none;
+}

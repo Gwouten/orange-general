@@ -1,0 +1,23 @@
+.le-cdh {
+  &__subheader {
+    background: url(../assets/img/icon-bullet.svg) -1rem -0.8rem no-repeat;
+    background-size: 4rem;
+    font-size: 2.5rem;
+    margin-top: $margin-l;
+    padding-left: 3.5rem;
+
+    &:last-child {
+      margin-bottom: $margin-l;
+    }
+
+    &--no-icon {
+      padding-left: 0;
+      background: none;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+}

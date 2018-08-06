@@ -1,0 +1,108 @@
+.table {
+  width: 100%;
+  font-family: $font-nav;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+
+  &__head {
+    .table__cell {
+      font-size: 1.4rem;
+      &:before {
+        display: none !important;
+      }
+      &:nth-of-type(4) {
+        color: $col-black;
+      }
+    }
+  }
+
+  &__row {
+    border-top: 1px solid $col-med-grey;
+  }
+
+  &__cell {
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    vertical-align: top;
+    @include screen(tab-port) {
+      font-size: 1.6rem;
+    }
+
+    &__header {
+      display: block;
+    }
+
+    &:first-of-type {
+      font-weight: 600;
+      text-align: left;
+      @include screen(tab-port) {
+        padding-left: 5rem;
+        display: inline-block;
+        width: 100%;
+      }
+
+      &:before {
+        display: none;
+        @include screen(tab-port) {
+          display: block;
+          @include center;
+          content: "";
+          background: url(../assets/img/arrow.svg) center 60% $col-primary;
+          background-size: 90%;
+          backface-visibility: hidden;
+          border: 1px solid $col-white;
+          left: 0;
+          width: 2rem;
+          height: 2rem;
+          transform: translate(0, -50%) translateZ(0) rotate(-100grad);
+          border-radius: 1000px;
+          transition: transform 0.2s;
+        }
+
+        .table__link:hover &,
+        .table__link:focus & {
+          transform: translate(1rem, -50%) translateZ(0) rotate(-100grad);
+        }
+      }
+    }
+
+    &--no-arrow:first-of-type {
+      @include screen(tab-port) {
+        padding-left: 0;
+        padding-right: 1rem;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &--align-left {
+      text-align: left;
+      width: 70%;
+    }
+
+    &:nth-of-type(4) {
+      font-weight: 600;
+      color: $col-primary;
+    }
+  }
+
+  &__link:link,
+  &__link:active,
+  &__link:visited {
+    display: block;
+    transition: color 0.2s;
+    text-decoration: none;
+
+    &:last-child .table__row {
+      border-bottom: 1px solid $col-med-grey;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $col-primary;
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch",
+    "babel": "gulp babel",
+    "sass": "gulp sass",
+    "include": "gulp include",
+    "package": "gulp package",
+    "package-styling": "gulp package-styling",
+    "upload-css": "gulp upload-css",
+    "upload-js": "gulp upload-js",
+    "imagemin": "gulp imagemin",
+    "removeLocalDistFolder": "rm -rf dist",
+    "build": "run-s removeLocalDistFolder imagemin babel sass include package",
+    "upload-styling": "gulp upload-styling",
+    "concat": "gulp concat",
+    "upload:styling": "run-s babel sass package-styling upload-css upload-js"
+  },
+  "unused": {
+    "removeRemoteDirectory": "gulp removeRemoteDirectory",
+    "upload": "gulp upload",
+    "upload:prod": "run-s removeLocalDistFolder babel sass include package imagemin upload"
+  },
+  "author": "Wouter Deloof",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gzip": "^1.4.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-include": "^2.3.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "imagemin-guetzli": "^1.0.0",
+    "vinyl-ftp": "^0.6.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "normalize.css": "^7.0.0",
+    "npm-run-all": "^4.1.3",
+    "siema": "^1.5.1"
+  }
+}

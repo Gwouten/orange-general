@@ -1,0 +1,29 @@
+$font-nav: "Exo", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-nav;
+  font-style: italic;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.6rem;
+  margin-top: $margin-s;
+}

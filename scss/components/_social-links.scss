@@ -1,0 +1,140 @@
+.social-links {
+  @include clearfix;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  height: 3rem;
+  padding: 2rem;
+  position: relative;
+  right: 0;
+  text-align: right;
+  transform: translateX(-105%);
+  transition: all 0.5s 0.35s;
+  width: 100%;
+  z-index: 1001;
+  @include screen(tab-port) {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    height: 3rem;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    transform: translateX(0.5rem);
+    width: auto;
+  }
+
+  &--top {
+    top: 0;
+  }
+
+  &--bottom {
+    position: absolute;
+    right: 0;
+    transform: translateX(1rem);
+    padding: 0;
+    width: auto;
+    bottom: 3rem;
+    z-index: 1;
+  }
+
+  &__item {
+    float: left;
+    background-color: $col-primary;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    transition: all 0.2s;
+    z-index: 0;
+    list-style: none;
+    transform: skewX($skew);
+    @include screen(tab-port) {
+    }
+
+    &:hover {
+      box-shadow: $shadow-regular;
+      transform: skewX($skew) scale(1.1);
+      z-index: 1;
+    }
+
+    &--extra {
+      background-color: $col-secondary;
+      text-align: center;
+      width: 100%;
+
+      @include screen(tab-port) {
+        margin-right: 0.3rem;
+        width: auto;
+      }
+      &:nth-of-type(even) {
+        background-color: $col-grey;
+      }
+
+      // &:nth-of-type(4) {
+      //   background-color: $col-grey;
+      // }
+    }
+
+    &--youtube {
+      background-color: $col-youtube !important;
+    }
+
+    &--facebook {
+      background-color: $col-facebook !important;
+    }
+
+    &--twitter {
+      background-color: $col-twitter !important;
+    }
+
+    &--linkedin {
+      background-color: $col-linkedin !important;
+    }
+
+    &--instagram {
+      background: $col-instagram !important;
+      background-size: cover;
+    }
+
+    &:last-of-type {
+      width: 5rem;
+      height: 3rem;
+      transform: skewX($skew);
+      background: url("../assets/img/orange-bg.jpg") 60% 50% no-repeat;
+      background-size: 200%;
+
+      &:hover {
+        box-shadow: none;
+        transform: scale(1) skewX($skew);
+      }
+    }
+  }
+
+  &__icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &__link:link,
+  &__link:active,
+  &__link:visited {
+    color: $col-white;
+    display: inline-block;
+    max-height: 3rem;
+    padding: 0.5rem 4rem;
+    transform: skewX($anti-skew);
+    transition: padding 0.5s;
+    text-decoration: none;
+    @include screen(tab-port) {
+      padding: 0.5rem 2rem;
+    }
+    @include screen(tab-land) {
+      padding: 0.5rem 4rem;
+    }
+  }
+  &__link--social:link,
+  &__link--social:active,
+  &__link--social:visited {
+    padding: 0.7rem 1rem 0.9rem;
+  }
+}

@@ -1,0 +1,128 @@
+$column-gap: 5rem;
+
+.candidate-body {
+  & > * {
+    margin-top: $margin-m;
+    margin-bottom: $margin-m;
+
+    & > * {
+      margin-top: $margin-m;
+      margin-bottom: $margin-m;
+      @include screen(tab-port) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__propositions {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    @include screen(tab-port) {
+      width: calc(50% - 2.5rem);
+    }
+  }
+
+  &__overview {
+    width: 100%;
+    margin: 0;
+    @include screen(tab-port) {
+      width: calc(50% - 2.5rem);
+    }
+    &__header {
+      color: $col-primary;
+      font-style: normal;
+      margin-bottom: $margin-m;
+      margin-top: 0;
+      @include screen(phone) {
+        font-size: 3rem;
+      }
+    }
+
+    &__text {
+      margin-bottom: $margin-m;
+    }
+  }
+
+  &__resume {
+    background-color: $col-med-grey;
+    border-radius: $brad-m;
+    padding: $padding-m;
+    width: 100%;
+    // margin-top: $margin-m;
+    margin-bottom: $margin-l;
+    // z-index: 1;
+    @include screen(tab-port) {
+      // float: right;
+      // margin: 0 0 $margin-m $margin-l;
+      padding: $padding-m;
+      width: 50%;
+    }
+    &__item {
+      padding: $padding-s 0 $padding-s $padding-l;
+      @include screen(tab-port) {
+        padding: $padding-m 0 $padding-m $padding-l;
+      }
+      &:not(:last-of-type) {
+        border-bottom: 2px dotted $col-black;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: url(../assets/img/icon-bullet.svg) center center no-repeat;
+        background-size: contain;
+        top: 1.25rem;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+        @include screen(tab-port) {
+          top: 1rem;
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+    }
+
+    .candidate-body__propositions & {
+      @include screen(tab-port) {
+        width: 100%;
+        margin: 0 0 $margin-l 0;
+      }
+    }
+  }
+
+  &__textblock {
+    @include screen(tab-port) {
+      width: 40%;
+    }
+
+    .quoteblock + & {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      @include screen(tab-port) {
+        max-width: 40rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__header {
+    font-size: 2.5rem;
+    &:not(:first-of-type) {
+      margin-top: $margin-xl;
+    }
+  }
+
+  &__text {
+    .candidate-body__header + & {
+      margin-top: $margin-m;
+    }
+  }
+}

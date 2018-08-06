@@ -1,0 +1,44 @@
+.disclaimer {
+  margin-top: $margin-xl;
+  counter-reset: disclaimer-counter;
+
+  &__header {
+    font-size: 3rem;
+  }
+
+  &__subheader {
+    font-size: 2.4rem;
+    margin-top: $margin-m;
+    counter-increment: disclaimer-counter;
+    &:before {
+      content: counter(disclaimer-counter) ". ";
+    }
+  }
+
+  &__subheader-3 {
+    font-size: 1.6rem;
+    margin-top: $margin-m;
+  }
+
+  &__list {
+    & + * {
+      margin-top: $margin-m;
+    }
+
+    &__item {
+      margin-top: $margin-s;
+      font-size: 1.6rem;
+
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 606px;
+    height: auto;
+    margin-top: $margin-m;
+  }
+}

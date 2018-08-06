@@ -1,0 +1,52 @@
+.footer {
+  background-color: $col-grey;
+  color: $col-light-grey;
+  font-style: italic;
+  margin-top: $margin-s;
+  padding-top: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &__cols {
+    @include clearfix;
+    // max-width: 120rem;
+    margin: 0 auto;
+    width: 100%;
+
+    &__col {
+      @include screen(tab-port) {
+        float: left;
+        width: calc(95% / 2);
+        &:not(:last-of-type) {
+          margin-right: 5%;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    background-color: $col-black;
+    padding: $padding-xs $padding-m;
+    font-size: 1.4rem;
+    margin-top: 5rem;
+    text-align: center;
+    @include screen(tab-port) {
+    }
+  }
+
+  &__header {
+    font-size: 1.6rem;
+    margin-top: $margin-l;
+    margin-bottom: $margin-s;
+    @include screen(tab-port) {
+      margin-bottom: $margin-m;
+    }
+  }
+
+  &__text {
+    margin-bottom: $margin-s;
+    text-rendering: optimizeLegibility;
+    font-weight: 400;
+  }
+}

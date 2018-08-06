@@ -1,0 +1,41 @@
+// Colors
+$col-primary: #f7a600;
+$col-secondary: #e86b28;
+$col-tertiary: #ad4547;
+$col-white: #fff;
+$col-black: #222;
+$col-grey: #606060;
+$col-light-grey: lighten($col-grey, 60%);
+$col-med-grey: lighten($col-grey, 40%);
+$col-dark-grey: darken($col-grey, 30%);
+
+$col-cdh: url("../assets/img/orange-bg.jpg") 70% 60% no-repeat;
+$col-youtube: #fb3d00;
+$col-facebook: #3b629b;
+$col-twitter: #0bb8ff;
+$col-linkedin: #007ab5;
+$col-instagram: url("../assets/img/instagram-bg.jpg");
+
+// Shadows
+$shadow-regular: 0 0.5rem 1rem rgba($col-black, 0.7);
+
+// Angle for transforms
+$skew: -8deg;
+$anti-skew: -$skew;
+
+// Margin and padding
+$margin-hair: 2px;
+$margin-s: 1rem;
+$margin-m: 2rem;
+$margin-l: 4rem;
+$margin-xl: 5rem;
+
+$padding-xs: 0.5rem;
+$padding-s: 1rem;
+$padding-m: 2rem;
+$padding-l: 4rem;
+$padding-xl: 5rem;
+
+// Border-radius:
+$brad-m: 3rem;
+$brad-full: 1000px;

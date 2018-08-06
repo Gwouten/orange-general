@@ -1,0 +1,75 @@
+.engagements {
+  @include clearfix;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  @include screen(tab-port) {
+    padding: 2rem 0;
+  }
+
+  &__block {
+    float: left;
+    height: 10rem;
+    transition: all 0.5s;
+    width: 100%;
+    @include screen(tab-port) {
+      width: 33.3333%;
+      height: 15rem;
+      transform: skewX($skew);
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $col-black;
+      @include screen(tab-port) {
+        border-bottom: none;
+        border-right: 1px solid $col-black;
+      }
+    }
+
+    &:before {
+      content: "";
+      background: url(../assets/img/arrow-yellow.svg);
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      transform: translateY(-50%) rotateZ(300grad);
+      @include screen(tab-port) {
+        left: 2rem;
+        transform: translateY(-50%) skewX($anti-skew);
+      }
+    }
+
+    &:nth-child(1):before {
+      @include screen(tab-port) {
+        transform: translateY(-50%) rotateZ(100grad) skewY($skew);
+      }
+    }
+
+    &:nth-child(3):before {
+      @include screen(tab-port) {
+        transform: translateY(-50%) rotateZ(300grad) skewY($skew);
+      }
+    }
+  }
+
+  &__heading {
+    @include center;
+    color: $col-grey;
+    display: inline-block;
+    font-family: $font-nav;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0 2rem 0 6rem;
+    text-decoration: none;
+    width: 100%;
+    @include screen(tab-port) {
+      transform: translate(-50%, -50%) skewX($anti-skew);
+      font-size: 2.3rem;
+    }
+  }
+}

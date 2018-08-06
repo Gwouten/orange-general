@@ -1,0 +1,247 @@
+%contains-iframe {
+  padding-top: 56.25%;
+  width: 100%;
+  background-color: $col-black;
+}
+
+%iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-hero {
+  background: $col-cdh;
+  padding: 0 0 $padding-m 0;
+  margin: 0 0 $margin-m 0;
+  color: $col-white;
+  @include screen(tab-port) {
+    margin: $margin-m 0;
+    padding: $padding-m;
+    background-size: 150%;
+  }
+  &__video-container {
+    @extend %contains-iframe;
+    width: calc(100% + 6rem);
+    padding-top: calc(56.25% + 3.375rem);
+    margin: 0 -3rem;
+    @include screen(tab-port) {
+      width: 50%;
+      padding-top: calc(56.25% / 2);
+      box-shadow: $shadow-regular;
+    }
+    iframe {
+      @extend %iframe;
+    }
+  }
+  &__info {
+    width: 100%;
+    @include screen(tab-port) {
+      padding: 0 2rem;
+      width: 50%;
+    }
+  }
+  &__header {
+    font-size: 2.4rem;
+    line-height: 1.3;
+  }
+  &__date {
+    margin-bottom: $margin-s;
+    font-weight: 600;
+  }
+  &__description {
+  }
+}
+
+.video-box {
+  @include center;
+  animation: fade-in 0.75s 0.1s forwards;
+  box-shadow: $shadow-regular;
+  max-width: 100vw;
+  opacity: 0;
+  position: fixed;
+  width: 90%;
+  transition: opacity 0.5s 0.5s;
+  z-index: 100;
+  @include screen(phone) {
+    height: 85vh;
+  }
+  @include screen(tab-port) {
+    max-width: 72rem;
+    width: 45%;
+  }
+
+  &:after {
+    content: "";
+    @include center;
+    background-color: rgba($col-black, 0.5);
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+  }
+
+  &--close {
+    animation: fade-out 0.5s forwards;
+    opacity: 1;
+  }
+
+  &__close {
+    background: $col-secondary;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: $shadow-regular;
+    color: $col-white;
+    font-family: $font-nav;
+    font-size: 2rem;
+    padding: 0.55rem 1rem 0.35rem;
+    position: absolute;
+    right: -1.3rem;
+    top: -1.5rem;
+    z-index: 200;
+    @include screen(tab-port) {
+      box-shadow: none;
+      text-shadow: $shadow-regular;
+      padding: 0 1rem;
+      background: none;
+      right: -3rem;
+      cursor: pointer;
+    }
+  }
+
+  &__video {
+    @extend %contains-iframe;
+
+    iframe {
+      @extend %iframe;
+    }
+  }
+
+  &__controls {
+    background-color: $col-white;
+    padding: $padding-m;
+    @include screen(phone) {
+      height: calc(85vh - 90vw * 56.25 / 100);
+      overflow: scroll;
+      transform: translateZ(0);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    margin-bottom: $margin-s;
+
+    &__title {
+      font-size: 1.8rem;
+      margin: 0;
+      align-self: center;
+      @include screen(tab-port) {
+        font-size: 3rem;
+      }
+    }
+
+    &__stats {
+      width: 10rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 100%;
+
+      &__views {
+        font-size: 1.8rem;
+        width: 100%;
+        text-align: right;
+        height: 60%;
+      }
+
+      &__likes,
+      &__dislikes {
+        font-size: 1.4rem;
+        height: 40%;
+      }
+
+      &__icon {
+        width: 1.5rem;
+        height: auto;
+        transform: translateY(2px);
+
+        &--large {
+          width: 2rem;
+        }
+      }
+    }
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $margin-m;
+    text-align: left;
+    min-height: 4.8rem;
+    flex-wrap: wrap;
+
+    &__share {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      @include screen(phone) {
+        margin-top: $margin-s;
+      }
+
+      &__button {
+        background-color: $col-grey;
+        color: $col-white;
+        display: block;
+        font-size: 1.2rem;
+        padding: 0rem 1rem 0.5rem 2rem;
+        height: 2rem;
+        border: 2px solid $col-white;
+        border-radius: 2px;
+
+        &--facebook {
+          background: url("../assets/img/icon-sprite-facebook.svg") no-repeat
+            $col-facebook;
+          background-size: contain;
+          border-color: $col-facebook;
+          margin-right: 1rem;
+        }
+
+        &--twitter {
+          background: url("../assets/img/icon-sprite-twitter.svg") no-repeat
+            $col-twitter;
+          background-size: contain;
+          border-color: $col-twitter;
+        }
+      }
+    }
+  }
+
+  &__description {
+    &__date {
+      font-weight: 600;
+      margin-bottom: $margin-s;
+    }
+  }
+}
+
+.video-list {
+  &__header {
+    margin-bottom: $margin-s;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    margin: 0 0.5rem;
+
+    .youtube {
+      display: block;
+      padding-top: 55%;
+      cursor: pointer;
+    }
+  }
+}
