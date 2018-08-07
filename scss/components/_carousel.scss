@@ -2,6 +2,7 @@
   background-color: $col-secondary;
   color: $col-white;
   z-index: 1;
+  margin-bottom: $margin-l;
 
   &--faders {
     &:before,
@@ -36,7 +37,7 @@
   }
 
   &--pagination {
-    // background: none;
+    background: none;
     position: relative;
 
     &__buttons {
@@ -151,10 +152,6 @@
   &__text {
     font-size: 1.6rem;
     line-height: 1.2;
-  }
-
-  &--projects {
-    margin-bottom: 2px;
   }
 
   &--youtube {

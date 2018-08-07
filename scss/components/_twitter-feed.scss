@@ -13,6 +13,11 @@
     }
   }
 
+  &__logo {
+    height: 5rem;
+    width: 5rem;
+  }
+
   &__wrapper {
     background-color: $col-white;
     box-shadow: $shadow-regular;

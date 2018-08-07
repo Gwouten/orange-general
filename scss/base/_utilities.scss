@@ -26,12 +26,11 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
+  margin-bottom: $margin-l;
   flex-direction: column;
   @include screen(tab-port) {
     min-height: 1rem;
     flex-direction: row;
-    flex-wrap: wrap;
   }
 
   &--align-top {
