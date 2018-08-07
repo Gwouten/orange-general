@@ -4,15 +4,23 @@
   font-style: italic;
   margin-top: $margin-l;
   padding-bottom: $padding-l;
+  overflow: hidden;
   position: relative;
   z-index: 1;
 
   &__cols {
     align-items: stretch;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
+    text-align: center;
+
+    @include screen(tab-port) {
+      text-align: left;
+      flex-direction: row;
+    }
 
     &__col {
       @include screen(tab-port) {
@@ -41,9 +49,10 @@
     background-color: $col-black;
     padding: $padding-xs $padding-m;
     font-size: 1.4rem;
-    margin-bottom: 5rem;
-    text-align: left;
+    margin-bottom: 7rem;
     @include screen(tab-port) {
+      text-align: left;
+      margin-bottom: 5rem;
       height: 3rem;
     }
   }

@@ -84,8 +84,27 @@ const setThemeLinks = function() {
 };
 
 // Siema slider
-function siema(element, autoplay = true, draggable = true, interval = 5000) {
+function siema(
+  element,
+  autoplay = true,
+  draggable = true,
+  interval = 5000,
+  smallCount = 2,
+  medCount = 3,
+  largeCount = 4
+) {
   const sliderContainer = document.querySelector(`.${element}`);
+  let sliderButtons = [];
+
+  function setActiveButton() {
+    if (sliderButtons.length) {
+      const activeClass = "carousel--pagination__button--fill";
+      const slide = this.currentSlide;
+
+      document.querySelector(`.${activeClass}`).classList.remove(activeClass);
+      sliderButtons[slide].classList.add(activeClass);
+    }
+  }
 
   if (sliderContainer !== null) {
     const slider = new Siema({
@@ -93,47 +112,71 @@ function siema(element, autoplay = true, draggable = true, interval = 5000) {
       duration: 1000,
       easing: "ease-in-out",
       perPage: {
-        600: 2,
-        900: 3,
-        1200: 4
+        600: smallCount,
+        900: medCount,
+        1200: largeCount
       },
       loop: true,
-      draggable
+      draggable,
+      onChange: setActiveButton
     });
 
-    // Create next/prev buttons
-    Siema.prototype.createButtons = function(element) {
-      const nextButton = document.createElement("button");
-      nextButton.classList.add("btn");
-      nextButton.classList.add("btn--carousel");
-      nextButton.classList.add("carousel__next");
-      nextButton.classList.add(`${element}__next`);
-      sliderContainer.appendChild(nextButton);
+    if (!sliderContainer.classList.contains("carousel--pagination")) {
+      // Create next/prev buttons
+      Siema.prototype.createButtons = function(element) {
+        const nextButton = document.createElement("button");
+        nextButton.classList.add("btn");
+        nextButton.classList.add("btn--carousel");
+        nextButton.classList.add("carousel__next");
+        nextButton.classList.add(`${element}__next`);
+        sliderContainer.appendChild(nextButton);
 
-      const prevButton = document.createElement("button");
-      prevButton.classList.add("btn");
-      prevButton.classList.add("btn--carousel");
-      prevButton.classList.add("carousel__prev");
-      prevButton.classList.add(`${element}__prev`);
-      sliderContainer.appendChild(prevButton);
+        const prevButton = document.createElement("button");
+        prevButton.classList.add("btn");
+        prevButton.classList.add("btn--carousel");
+        prevButton.classList.add("carousel__prev");
+        prevButton.classList.add(`${element}__prev`);
+        sliderContainer.appendChild(prevButton);
 
-      // callback to bind functionality to buttons
-      slider.bindButtons(element);
-    };
+        // callback to bind functionality to buttons
+        slider.bindButtons(element);
+      };
 
-    // Make buttons work
-    Siema.prototype.bindButtons = function(element) {
-      const carouselPrev = document.querySelector(`.${element}__prev`);
-      const carouselNext = document.querySelector(`.${element}__next`);
+      // Make buttons work
+      Siema.prototype.bindButtons = function(element) {
+        const carouselPrev = document.querySelector(`.${element}__prev`);
+        const carouselNext = document.querySelector(`.${element}__next`);
 
-      carouselPrev.addEventListener("click", () => slider.prev());
-      carouselNext.addEventListener("click", () => slider.next());
-    };
+        carouselPrev.addEventListener("click", () => slider.prev());
+        carouselNext.addEventListener("click", () => slider.next());
+      };
 
-    slider.createButtons(element);
-    window.addEventListener("resize", () => {
-      slider.createButtons();
-    });
+      slider.createButtons(element);
+      window.addEventListener("resize", () => {
+        slider.createButtons();
+      });
+    } else {
+      // setup pagination buttons
+      Siema.prototype.addPagination = function() {
+        const innerElements = Array.prototype.slice.call(this.innerElements);
+        const buttonContainer = document.createElement("div");
+        buttonContainer.classList.add("carousel--pagination__buttons");
+        sliderContainer.appendChild(buttonContainer);
+
+        innerElements.forEach((innerElement, i) => {
+          const pageButton = document.createElement("button");
+          pageButton.classList.add("carousel--pagination__button");
+          pageButton.addEventListener("click", () => this.goTo(i));
+          sliderButtons.push(pageButton);
+          buttonContainer.appendChild(pageButton);
+          if (i === 0) {
+            pageButton.classList.add("carousel--pagination__button--fill");
+          }
+        });
+      };
+
+      slider.addPagination();
+    }
 
     if (autoplay) {
       let autoSlide = setInterval(function() {

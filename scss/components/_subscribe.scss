@@ -2,8 +2,13 @@
   background-color: lighten($col-grey, 10%);
   display: flex;
   flex-wrap: wrap;
+  margin: $margin-m 0 $margin-l;
   padding: $padding-m;
   border-radius: $brad-xs;
+  box-shadow: $shadow-regular;
+  @include screen(tab-port) {
+    margin: 0;
+  }
 
   &__header {
     margin-bottom: $margin-s;
@@ -13,10 +18,13 @@
   &__checkboxes {
     display: flex;
     width: 100%;
+    justify-content: space-evenly;
+    @include screen(tab-port) {
+      justify-content: flex-start;
+    }
   }
 
   &__checkbox {
-    // width: 50%;
     margin-bottom: $margin-m;
     &:last-of-type {
       margin-left: $margin-m;

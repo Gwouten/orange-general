@@ -1,32 +1,78 @@
 .carousel {
-  background-color: $col-grey;
+  background-color: $col-secondary;
   color: $col-white;
   z-index: 1;
 
-  &:before,
-  &:after {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 5rem;
-    z-index: 1;
-    @include screen(tab-port) {
-      width: 15rem;
+  &--faders {
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 5rem;
+      z-index: 1;
+      @include screen(tab-port) {
+        width: 15rem;
+      }
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        $col-secondary 30%,
+        rgba($col-secondary, 0)
+      );
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        $col-secondary 30%,
+        rgba($col-secondary, 0)
+      );
     }
   }
 
-  &:before {
-    left: 0;
-    background: linear-gradient(to right, $col-grey 30%, rgba($col-grey, 0));
-  }
+  &--pagination {
+    // background: none;
+    position: relative;
 
-  &:after {
-    right: 0;
-    background: linear-gradient(to left, $col-grey 30%, rgba($col-grey, 0));
+    &__buttons {
+      @include center;
+      top: 100%;
+      transform: translate3d(-50%, -150%, 0);
+    }
+    &__button {
+      background: none;
+      border: 1px solid $col-white;
+      border-radius: $brad-full;
+      display: inline-block;
+      height: 1.4rem;
+      margin: 0 0.2rem;
+      width: 1.4rem;
+
+      &--fill {
+        background-color: $col-white;
+      }
+    }
+    &__image {
+    }
+    &__header {
+      font-style: normal;
+      font-size: 4rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-shadow: $shadow-regular;
+      transform: translateY(-25%);
+    }
   }
 
   &__prev,
   &__next {
+    background-color: $col-grey;
     position: absolute;
     top: 50%;
     z-index: 2;
@@ -65,6 +111,7 @@
 
   &__slide {
     transform: skewX($skew);
+    position: relative;
 
     &:before {
       border-right: 2px solid $col-white;
@@ -72,6 +119,10 @@
       top: 0;
       right: 0;
       height: 21rem;
+    }
+
+    &--no-skew {
+      transform: none;
     }
 
     &__content {
@@ -85,7 +136,7 @@
   }
 
   &__header {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 0.75rem;
     line-height: 1.2;
 
