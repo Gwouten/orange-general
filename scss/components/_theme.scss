@@ -1,21 +1,33 @@
 .theme {
-  margin-top: $margin-l;
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px dotted $col-black;
+  padding-top: $padding-m;
+  padding-bottom: $padding-m;
+
+  &:first-of-type {
+    margin-top: $margin-l;
+  }
+
+  &:last-of-type {
+    border-bottom: 3px dotted $col-black;
+    margin-bottom: $margin-l;
+  }
 
   &__header {
-    font-size: 4rem;
-    color: $col-secondary;
+    font-size: 3rem;
+    font-style: normal;
+    margin-top: 0;
   }
+
+  &__image {
+    margin-right: 5rem;
+    height: auto;
+    width: 25%;
+  }
+
   &__content {
-    align-items: flex-start;
-    display: flex;
-    justify-content: space-between;
-
-    &__image {
-      margin-right: 5rem;
-      height: auto;
-      width: 20%;
-    }
-
     &__text {
       &:first-of-type {
         margin-top: 0;

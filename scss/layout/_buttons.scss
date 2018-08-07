@@ -49,7 +49,6 @@
     &:before,
     &:after {
       @include center;
-      content: "";
       display: block;
       width: 2rem;
       height: 2px;

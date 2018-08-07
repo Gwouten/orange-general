@@ -74,7 +74,6 @@
   }
 
   &:after {
-    content: "";
     @include center;
     background-color: rgba($col-black, 0.5);
     height: 100vh;

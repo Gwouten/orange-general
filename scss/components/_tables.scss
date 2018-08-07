@@ -47,7 +47,6 @@
         @include screen(tab-port) {
           display: block;
           @include center;
-          content: "";
           background: url(../assets/img/arrow.svg) center 60% $col-primary;
           background-size: 90%;
           backface-visibility: hidden;
