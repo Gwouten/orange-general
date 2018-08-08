@@ -1,15 +1,30 @@
 .newsfeed {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  margin: $margin-m 0;
   flex-wrap: wrap;
+  width: 100%;
+  @include screen(tab-port) {
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  &:before {
+    display: none;
+  }
 
   &__item {
-    height: 20rem;
-    margin: 0 1rem 2rem 0;
+    height: 15rem;
+    margin: 0 0 2rem 0;
     overflow: hidden;
     position: relative;
-    width: 20rem;
     transition: box-shadow 0.2s, transform 0.2s;
+    width: 40%;
+    @include screen(tab-port) {
+      margin: 0 1rem 2rem 0;
+      height: 20rem;
+      width: 20rem;
+    }
 
     &:hover {
       box-shadow: $shadow-regular;
@@ -79,7 +94,7 @@
   &__header {
     bottom: 3rem;
     color: $col-white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-style: normal;
     line-height: 1.2;
     margin-left: 1rem;
@@ -87,6 +102,9 @@
     position: absolute;
     text-shadow: $shadow-near;
     transition: transform 0.2s;
+    @include screen(tab-port) {
+      font-size: 1.8rem;
+    }
 
     .newsfeed__item:hover & {
       transform: translateY(-1rem);

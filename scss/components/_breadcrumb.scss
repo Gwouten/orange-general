@@ -1,13 +1,22 @@
 .breadcrumb {
-  margin: $margin-l 0;
+  margin: $margin-s 0;
   color: $col-grey;
+  @include screen(tab-port) {
+    margin: $margin-m 0;
+  }
 
   &__trail {
-    font-size: 1.5rem;
-    margin-bottom: $margin-m;
+    font-size: 1.3rem;
+    margin-bottom: $margin-s;
+    @include screen(tab-port) {
+      font-size: 1.5rem;
+    }
   }
 
   &__header {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    @include screen(tab-port) {
+      font-size: 2.5rem;
+    }
   }
 }

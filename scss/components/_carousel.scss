@@ -2,7 +2,12 @@
   background-color: $col-secondary;
   color: $col-white;
   z-index: 1;
-  margin-bottom: $margin-l;
+  margin-bottom: $margin-s;
+  text-align: center;
+  @include screen(tab-port) {
+    text-align: left;
+    margin-bottom: $margin-m;
+  }
 
   &--faders {
     &:before,
@@ -58,16 +63,20 @@
         background-color: $col-white;
       }
     }
-    &__image {
-    }
     &__header {
       font-style: normal;
-      font-size: 4rem;
+      font-size: 2rem;
       position: absolute;
-      top: 50%;
+      top: 20%;
       left: 50%;
+      text-align: left;
       text-shadow: $shadow-regular;
-      transform: translateY(-25%);
+      // transform: translateY(-50%);
+      @include screen(tab-port) {
+        top: 50%;
+        font-size: 4rem;
+        transform: translateY(-25%);
+      }
     }
   }
 
@@ -134,12 +143,28 @@
         padding: 2rem;
       }
     }
+
+    &--pagination {
+      height: 20rem;
+      background-size: cover;
+      background-position: center;
+      @include screen(tab-port) {
+        height: 40rem;
+      }
+    }
   }
 
   &__header {
     font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
     margin-bottom: 0.75rem;
     line-height: 1.2;
+    text-decoration: none;
+
+    &:hover {
+      color: $col-white;
+    }
 
     &--name {
       font-size: 2rem;
