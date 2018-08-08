@@ -361,15 +361,6 @@ const toggleEngagementsProvinces = () => {
 };
 
 // Engagements filter
-// const filterEngagements = () => {
-//   const engagements = Array.prototype.slice.call(
-//     document.querySelectorAll(".engagements__item")
-//   );
-//   console.log(engagements);
-// };
-
-// document.addEventListener("DOMContentLoaded", filterEngagements);
-
 const buttons = Array.prototype.slice.call(
   document.querySelectorAll(".engagements__btn")
 );
@@ -378,18 +369,36 @@ const engagements = Array.prototype.slice.call(
   document.querySelectorAll(".engagements__item")
 );
 
-const filterEngagements = tag => {
-  console.log(tag);
-  engagements.forEach(engagement => {
-    engagement.style.display = "block";
-    if (engagement.dataset.tag.indexOf(tag) > -1) {
-      engagement.style.display = "none";
+const filterEngagements = (tag, isActive) => {
+  if (isActive) {
+    engagements.forEach(engagement => {
+      engagement.style.cssText = "";
+    });
+    if (activeBtn) {
+      activeBtn.classList.toggle(activeClass);
     }
-  });
+  } else {
+    engagements.forEach(engagement => {
+      engagement.style.display = "block";
+      if (engagement.dataset.tag.indexOf(tag) > -1) {
+        engagement.style.display = "none";
+      }
+    });
+  }
 };
 
 buttons.forEach(btn => {
+  const activeClass = "engagements__btn--active";
+
   btn.addEventListener("click", e => {
-    filterEngagements(e.target.dataset.tag);
+    const activeBtn = document.querySelector(`.${activeClass}`);
+    const isTargetActive =
+      Array.prototype.slice.call(e.target.classList).indexOf(activeClass) > -1;
+
+    if (activeBtn) {
+      activeBtn.classList.remove(activeClass);
+    }
+    e.target.classList.add(activeClass);
+    filterEngagements(e.target.dataset.tag, isTargetActive);
   });
 });
