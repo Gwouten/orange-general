@@ -1,3 +1,95 @@
 .newsfeed {
-  margin: $margin-l 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    height: 20rem;
+    margin: 0 1rem 2rem 0;
+    overflow: hidden;
+    position: relative;
+    width: 20rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+
+    &:hover {
+      box-shadow: $shadow-regular;
+      transform: scale(1.1);
+    }
+
+    &:before {
+      background-color: $col-grey;
+      color: $col-white;
+      font-size: 1.2rem;
+      padding: $padding-hair $padding-xs;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    // types list
+    $types: media, communiqué, agenda, vidéo;
+
+    @each $type in $types {
+      &--#{$type}:before {
+        content: "#{$type}";
+      }
+    }
+
+    &:after {
+      color: $col-white;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding: $padding-hair $padding-s;
+      position: absolute;
+      left: 1rem;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    // categories list
+    $categories: "enseignement" #eb5e09, "famille" #eb5e09, "santé" #ff0000,
+      "recherche" #ff0000, "énergie" #add647, "écologie" #add647,
+      "emploi" #f7a600, "économie" #f7a600, "mobilité" #413f8a,
+      "transport" #413f8a, "logement" #ad4447, "aménagement" #ad4447,
+      "sécurité" #90908e, "justice" #90908e, "culture" #1cc6f2, "sport" #1cc6f2;
+
+    @each $category in $categories {
+      &--#{nth($category, 1)}:after {
+        @include category(#{nth($category, 1)}, #{nth($category, 2)});
+      }
+    }
+  }
+
+  &__image {
+    @include center;
+    height: 101%;
+  }
+
+  &__date {
+    display: inline-block;
+    font-size: 65%;
+    font-style: italic;
+    margin-bottom: $margin-xs;
+    width: 100%;
+  }
+
+  &__header {
+    bottom: 3rem;
+    color: $col-white;
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 1.2;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position: absolute;
+    text-shadow: $shadow-near;
+    transition: transform 0.2s;
+
+    .newsfeed__item:hover & {
+      transform: translateY(-1rem);
+    }
+  }
 }

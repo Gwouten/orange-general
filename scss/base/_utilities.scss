@@ -23,7 +23,7 @@
 }
 
 .u-section-split {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin-bottom: $margin-l;
@@ -31,6 +31,8 @@
   @include screen(tab-port) {
     min-height: 1rem;
     flex-direction: row;
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   &--align-top {

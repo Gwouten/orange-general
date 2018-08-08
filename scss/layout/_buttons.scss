@@ -78,4 +78,16 @@
       top: -0.5rem;
     }
   }
+
+  &--twitter {
+    display: flex;
+    margin-left: auto;
+    margin-top: $margin-m;
+    background-color: $col-grey;
+    transform: rotate(-0.25turn);
+
+    &:hover {
+      transform: rotate(-0.25turn) scale(1.1);
+    }
+  }
 }

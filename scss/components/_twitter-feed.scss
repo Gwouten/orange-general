@@ -4,7 +4,7 @@
   background-color: $col-med-grey;
   padding: $padding-m;
   @include screen(tab-port) {
-    width: 50%;
+    width: 35rem;
   }
 
   .candidate-body__propositions > & {

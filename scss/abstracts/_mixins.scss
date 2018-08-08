@@ -25,6 +25,11 @@
   display: table;
 }
 
+@mixin category($category, $color) {
+  content: "#{$category}";
+  background-color: $color;
+}
+
 // Media query manager
 
 /*
