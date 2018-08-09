@@ -8,6 +8,10 @@
     text-align: left;
     margin-bottom: $margin-m;
   }
+  
+  &--grey {
+    background-color: $col-grey;
+  }
 
   &--faders {
     &:before,

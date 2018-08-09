@@ -1,12 +1,12 @@
 // Engagements filter
 const buttons = Array.prototype.slice.call(
-  document.querySelectorAll(".engagements__btn")
+  document.querySelectorAll(".filter__button")
 );
 
 const engagements = Array.prototype.slice.call(
   document.querySelectorAll(".engagements__item")
 );
-const activeClass = "engagements__btn--active";
+const activeClass = "filter__button--active";
 
 const filterEngagements = (tag, isActive) => {
   if (isActive) {

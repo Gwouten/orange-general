@@ -59,4 +59,41 @@
     font-size: 2.4rem;
     transition: color 0.2s;
   }
+
+  &__btn {
+    background: none;
+    border: none;
+    color: $col-white;
+    font-family: $font-nav;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 100%;
+  }
+}
+
+.filter {
+  background-color: $col-grey;
+  display: flex;
+  justify-content: center;
+  
+&__skew {
+  border-left: 2px solid $col-white;
+  transform: skew($skew);
+  width: calc(100% / 9);
+  
+  &:last-of-type {
+    border-right: 2px solid $col-white;
+  }
+}
+
+  &__button {
+    background: none;
+    border: none;
+    color: $col-white;
+    font-family: $font-nav;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: $padding-s 0;
+    width: 100%;
+  }
 }

@@ -41,7 +41,7 @@ gulp.task("removeRemoteDirectory", function() {
   });
 });
 
-gulp.task("upload", ["package"], function() {
+gulp.task("upload", function() {
   const conn = getFtpConnection();
   return (
     gulp
@@ -171,16 +171,7 @@ gulp.task("guetzli", function() {
 
 gulp.task("package", function() {
   gulp.src("css/*.{css,gz}").pipe(gulp.dest("dist/css"));
-  gulp
-    .src([
-      "js/bundle.js",
-      "js/bundle.js.gz",
-      "js/twitter.js",
-      "js/twitter.js.gz",
-      "js/safari-font-fix.js",
-      "js/safari-font-fix.js.gz"
-    ])
-    .pipe(gulp.dest("dist/js"));
+  gulp.src("js/*").pipe(gulp.dest("dist/js"));
   // gulp.src("font").pipe(gulp.dest("dist/font"));
   gulp.src("*.{html,php}").pipe(gulp.dest("dist"));
   gulp.src("favicons/*").pipe(gulp.dest("dist/favicons"));
