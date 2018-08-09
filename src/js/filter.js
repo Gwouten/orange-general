@@ -29,13 +29,13 @@ const setBtnActive = () => {};
 buttons.forEach(btn => {
   btn.addEventListener("click", e => {
     setBtnActive();
-    // const activeBtn = document.querySelector(`.${activeClass}`);
+    const activeBtn = document.querySelector(`.${activeClass}`);
     const isTargetActive =
       Array.prototype.slice.call(e.target.classList).indexOf(activeClass) > -1;
 
-    // if (activeBtn) {
-    //   activeBtn.classList.remove(activeClass);
-    // }
+    if (activeBtn) {
+      activeBtn.classList.remove(activeClass);
+    }
     e.target.classList.toggle(activeClass);
     filterEngagements(e.target.dataset.tag, isTargetActive);
   });

@@ -72,28 +72,84 @@
 }
 
 .filter {
-  background-color: $col-grey;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  
-&__skew {
-  border-left: 2px solid $col-white;
-  transform: skew($skew);
-  width: calc(100% / 9);
-  
-  &:last-of-type {
-    border-right: 2px solid $col-white;
+  @include screen(tab-port){
+    background-color: $col-grey;
+    
   }
-}
+  
+  &__skew {
+    background-color: $col-grey;
+    transform: skew($skew);
+    width: calc(100% / 4.3);
+    transition: background-color .2s;
+    margin: 0 .1rem 1rem;
+    
+    @include screen(tab-port){
+      border-left: 2px solid $col-white;
+      background-color: none;
+      margin: 0;
+      width: calc(100% / 8.9);
+    }
+    
+    &:last-of-type {
+      border-right: 2px solid $col-white;
+    }
+
+    @each $color in $colors {
+      $i: index($colors, $color);
+      &:nth-of-type(#{$i}) .filter__button:before {
+        background-color: $color;
+        bottom: -.5rem;
+        display: block;
+        height: 3px;
+        position: absolute;
+        transform: skew($skew);
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      @include screen(tab-port){
+        background-color: $col-med-grey;
+      }
+    }
+  }
 
   &__button {
     background: none;
     border: none;
     color: $col-white;
+    cursor: pointer;
     font-family: $font-nav;
-    font-weight: 600;
-    font-size: 1.6rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.4;
     padding: $padding-s 0;
+    transition: background-color .2s, box-shadow .2s, transform .2s;
     width: 100%;
+    
+    @include screen(tab-port){
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+    
+    @include screen(tab-land){
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      text-shadow: $shadow-near;
+    }
+
+    @each $color in $colors {
+      $i: index($colors, $color);
+      .filter__skew:nth-of-type(#{$i}) &--active {
+        background-color: $color
+      }
+    }
   }
 }

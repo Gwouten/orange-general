@@ -1,5 +1,9 @@
 .hero {
-  height: 40rem;
   background-size: cover;
   background-position: center;
+  height: 20rem;
+  
+  @include screen(tab-port){
+    height: 40rem;
+  }
 }
