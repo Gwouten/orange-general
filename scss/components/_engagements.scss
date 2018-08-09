@@ -1,6 +1,6 @@
 .engagements {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   &:before,
@@ -20,9 +20,14 @@
     transition: transform 0.2s, box-shadow 0.2s;
     width: 100%;
     @include screen(tab-port) {
+      margin-left: calc(10% / 6);
+      margin-right: calc(10% / 6);
       width: 30%;
     }
+
     @include screen(tab-land) {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
       width: 24rem;
     }
 

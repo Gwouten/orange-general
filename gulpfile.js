@@ -117,7 +117,7 @@ gulp.task("concat", function() {
       "src/js/siema.min.js",
       "src/js/awesomplete.js",
       "src/js/functions.js",
-      "src/js/youtube.js",
+      // "src/js/youtube.js",
       "src/js/privacy.js",
       "src/js/main.js"
     ])
@@ -129,7 +129,7 @@ gulp.task("concat", function() {
 
 gulp.task("extra-scripts", function() {
   return gulp
-    .src(["src/js/twitter.js", "src/js/safari-font-fix.js"])
+    .src(["src/js/twitter.js", "src/js/safari-font-fix.js", "src/js/filter.js"])
     .pipe(gulp.dest("js"))
     .pipe(gzip())
     .pipe(gulp.dest("js"));
