@@ -20,6 +20,10 @@
       padding: 0 5rem 0 0;
     }
   }
+
+  &--wide {
+    max-width: none;
+  }
 }
 
 .u-section-split {
@@ -80,10 +84,15 @@
 .u-strong {
   font-weight: 600;
   color: $col-secondary;
+
+  &--black {
+    font-weight: 600;
+    color: $col-black;
+  }
 }
 
 .u-orange {
-  color: $col-secondary;
+  color: $col-secondary !important;
 }
 
 .u-50 {

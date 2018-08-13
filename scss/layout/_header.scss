@@ -114,6 +114,7 @@
     &__icon:after {
       @include center;
       background-color: $col-white;
+      content: "";
       display: block;
       width: 2.4rem;
       height: 2px;
@@ -242,9 +243,9 @@
       transition: height 0.5s;
       @include screen(tab-port) {
         transform: skewX($skew);
-        margin-right: 1rem;
+        // margin-right: 1rem;
         display: flex;
-        padding: 0.5rem 1.6rem 0.5rem 0;
+        padding: 0.5rem 1.3rem;
         height: 4.5rem;
       }
       @include screen(tab-land) {
@@ -257,6 +258,13 @@
         @include screen(tab-port) {
           border-right: 1px solid $col-grey;
           border-bottom: none;
+        }
+      }
+
+      &--active {
+        background-color: $col-med-grey;
+        @include screen(tab-port) {
+          border-left: 1px solid $col-grey;
         }
       }
     }
@@ -283,7 +291,8 @@
 }
 
 .current {
-  color: $col-secondary !important;
+  background-color: $col-med-grey;
+  // color: $col-secondary !important;
 }
 
 .privacy {

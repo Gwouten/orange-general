@@ -13,7 +13,16 @@
     display: none;
   }
 
+  // newsfeed at the bottom of other pages
+  &--footer {
+    background-color: transparent;
+    border-top: 2px dashed $col-black;
+    display: block;
+    padding-top: $padding-xl;
+  }
+
   &__item {
+    display: block;
     height: 15rem;
     margin: 0 0 2rem 0;
     overflow: hidden;
@@ -32,6 +41,7 @@
     }
 
     &:before {
+      content: "";
       background-color: $col-grey;
       color: $col-white;
       font-size: 1.2rem;
@@ -43,15 +53,17 @@
     }
 
     // types list
-    $types: media, communiqué, agenda, vidéo;
+    $types: medias, communiqué, agenda, vidéo;
 
     @each $type in $types {
       &--#{$type}:before {
         content: "#{$type}";
+        text-transform: capitalize;
       }
     }
 
     &:after {
+      content: "";
       color: $col-white;
       font-size: 1.2rem;
       font-style: italic;
@@ -73,8 +85,15 @@
 
     @each $category in $categories {
       &--#{nth($category, 1)}:after {
+        content: "";
         @include category(#{nth($category, 1)}, #{nth($category, 2)});
       }
+    }
+
+    // Mods to carousel only for .newsfeed--footer
+    .carousel & {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

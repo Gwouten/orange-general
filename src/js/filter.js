@@ -1,4 +1,4 @@
-// Engagements filter
+// // Engagements filter
 const buttons = Array.prototype.slice.call(
   document.querySelectorAll(".filter__button")
 );
@@ -24,19 +24,29 @@ const filterEngagements = (tag, isActive) => {
   }
 };
 
-const setBtnActive = () => {};
-
 buttons.forEach(btn => {
   btn.addEventListener("click", e => {
-    setBtnActive();
-    const activeBtn = document.querySelector(`.${activeClass}`);
-    const isTargetActive =
-      Array.prototype.slice.call(e.target.classList).indexOf(activeClass) > -1;
+    console.log("clicked");
+    if (window.location.pathname === "/les-idees.html") {
+      const activeBtn = document.querySelector(`.${activeClass}`);
+      const isTargetActive =
+        Array.prototype.slice.call(e.target.classList).indexOf(activeClass) >
+        -1;
 
-    if (activeBtn) {
-      activeBtn.classList.remove(activeClass);
+      if (activeBtn) {
+        activeBtn.classList.remove(activeClass);
+      }
+      e.target.classList.toggle(activeClass);
+      filterEngagements(e.target.dataset.tag, isTargetActive);
+    } else {
+      window.location.assign(`les-idees.html?${e.target.dataset.tag}`);
     }
-    e.target.classList.toggle(activeClass);
-    filterEngagements(e.target.dataset.tag, isTargetActive);
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.search !== "") {
+    const tag = window.location.search.split("?")[1];
+    filterEngagements(tag, false);
+  }
 });

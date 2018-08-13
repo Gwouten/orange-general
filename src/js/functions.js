@@ -215,42 +215,31 @@ const scrollToTop = function(el) {
   });
 };
 
-// Indicate current page in navigation
-const setCurrentPageIndicator = function() {
-  const navEl = document.querySelector(".header__interior-links");
-  const currentPage = window.location.href.split("/");
-  const l = currentPage.length - 1;
-  const setActiveMenuItem = index => {
-    navEl.children[index].children[0].classList.add("current");
-  };
+// helper function for setCurrentPageIndicator
+const setActiveItem = (array, tag, newClass) => {
+  array.forEach(item => {
+    if (item.innerText.toLowerCase().indexOf(tag.toLowerCase().trim()) > -1) {
+      item.classList.add(`${newClass}--active`);
+    }
+  });
+};
 
-  switch (currentPage[l]) {
-    case "":
-      setActiveMenuItem(0);
-      break;
-    case "index.html":
-      setActiveMenuItem(0);
-      break;
-    case "communales.html":
-      setActiveMenuItem(1);
-      break;
-    case "provinces.html":
-      setActiveMenuItem(2);
-      break;
-    case "candidats.html":
-      setActiveMenuItem(3);
-      break;
-    case "le-cdh.html":
-      setActiveMenuItem(4);
-      break;
-    case "videos.html":
-      setActiveMenuItem(5);
-      break;
-    case "themes.html":
-      setActiveMenuItem(6);
-      break;
-    default:
-      break;
+// Indicate current page in navigation
+const setCurrentPageIndicator = () => {
+  const pageTags = document.querySelector("body").dataset.current.split(",");
+  const interiorLinks = Array.prototype.slice.call(
+    document.querySelectorAll(".header__interior-links__item")
+  );
+
+  // mark current active page in interion links menu
+  setActiveItem(interiorLinks, pageTags[0], "header__interior-links__item");
+
+  // mark current active item in subnav menu
+  if (document.querySelector(".subnav")) {
+    const subnavItems = Array.prototype.slice.call(
+      document.querySelectorAll(".subnav__item")
+    );
+    setActiveItem(subnavItems, pageTags[1], "subnav__item");
   }
 };
 

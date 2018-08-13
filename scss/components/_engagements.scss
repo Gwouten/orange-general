@@ -3,11 +3,6 @@
   justify-content: flex-start;
   flex-wrap: wrap;
 
-  &:before,
-  &:after {
-    display: none;
-  }
-
   &__item {
     align-items: flex-end;
     background-color: $col-light-grey;
@@ -32,6 +27,7 @@
     }
 
     &:before {
+      content: "";
       background-color: $col-secondary;
       background-image: url("../assets/img/arrow.svg");
       border-radius: $brad-full;
@@ -49,6 +45,7 @@
       box-shadow: 0 0.5rem 1rem rgba($col-black, 0.7);
 
       &:before {
+        content: "";
         box-shadow: 0 0.5rem 1rem rgba($col-black, 0.7);
         transform: translate(-50%, calc(-50% - 1rem));
       }
@@ -69,31 +66,60 @@
     font-weight: 600;
     width: 100%;
   }
+
+  &__content {
+    margin-bottom: $margin-l;
+
+    &__header {
+      font-style: normal;
+      font-size: 3rem;
+      border-bottom: 4px dotted $col-black;
+      padding-bottom: $padding-m;
+    }
+    &__list {
+      padding-left: $padding-xl;
+    }
+    &__item {
+      font-size: 1.6rem;
+      margin-top: $margin-s;
+
+      &:before {
+        content: "";
+        background: url("../assets/img/icon-bullet.svg");
+        display: block;
+        height: 3rem;
+        position: absolute;
+        width: 3rem;
+        top: -0.2rem;
+        left: -4rem;
+        transform: rotate(-0.25turn);
+      }
+    }
+  }
 }
 
 .filter {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @include screen(tab-port){
+  @include screen(tab-port) {
     background-color: $col-grey;
-    
   }
-  
+
   &__skew {
     background-color: $col-grey;
     transform: skew($skew);
     width: calc(100% / 4.3);
-    transition: background-color .2s;
-    margin: 0 .1rem 1rem;
-    
-    @include screen(tab-port){
+    transition: background-color 0.2s;
+    margin: 0 0.1rem 1rem;
+
+    @include screen(tab-port) {
       border-left: 2px solid $col-white;
       background-color: none;
       margin: 0;
       width: calc(100% / 8.9);
     }
-    
+
     &:last-of-type {
       border-right: 2px solid $col-white;
     }
@@ -101,8 +127,9 @@
     @each $color in $colors {
       $i: index($colors, $color);
       &:nth-of-type(#{$i}) .filter__button:before {
+        content: "";
         background-color: $color;
-        bottom: -.5rem;
+        bottom: -0.5rem;
         display: block;
         height: 3px;
         position: absolute;
@@ -112,7 +139,7 @@
     }
 
     &:hover {
-      @include screen(tab-port){
+      @include screen(tab-port) {
         background-color: $col-med-grey;
       }
     }
@@ -123,32 +150,36 @@
     border: none;
     color: $col-white;
     cursor: pointer;
+    display: block;
     font-family: $font-nav;
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.4;
     padding: $padding-s 0;
-    transition: background-color .2s, box-shadow .2s, transform .2s;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
     width: 100%;
-    
-    @include screen(tab-port){
+
+    @include screen(tab-port) {
       font-weight: 600;
       font-size: 1.4rem;
     }
-    
-    @include screen(tab-land){
+
+    @include screen(tab-land) {
       font-weight: 600;
       font-size: 1.6rem;
     }
 
     &:hover {
       text-shadow: $shadow-near;
+      color: $col-white;
     }
 
     @each $color in $colors {
       $i: index($colors, $color);
       .filter__skew:nth-of-type(#{$i}) &--active {
-        background-color: $color
+        background-color: $color;
       }
     }
   }

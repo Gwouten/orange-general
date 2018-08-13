@@ -1,1 +1,52 @@
-"use strict";var buttons=Array.prototype.slice.call(document.querySelectorAll(".filter__button")),engagements=Array.prototype.slice.call(document.querySelectorAll(".engagements__item")),activeClass="filter__button--active",filterEngagements=function(t,e){e?(engagements.forEach(function(t){t.style.cssText=""}),document.querySelector("."+activeClass).classList.remove(activeClass)):engagements.forEach(function(e){e.style.display="block",e.dataset.tag.indexOf(t)>-1&&(e.style.display="none")})},setBtnActive=function(){};buttons.forEach(function(t){t.addEventListener("click",function(t){setBtnActive();var e=document.querySelector("."+activeClass),s=Array.prototype.slice.call(t.target.classList).indexOf(activeClass)>-1;e&&e.classList.remove(activeClass),t.target.classList.toggle(activeClass),filterEngagements(t.target.dataset.tag,s)})});
+// // Engagements filter
+const buttons = Array.prototype.slice.call(
+  document.querySelectorAll(".filter__button")
+);
+
+const engagements = Array.prototype.slice.call(
+  document.querySelectorAll(".engagements__item")
+);
+const activeClass = "filter__button--active";
+
+const filterEngagements = (tag, isActive) => {
+  if (isActive) {
+    engagements.forEach(engagement => {
+      engagement.style.cssText = "";
+    });
+    document.querySelector(`.${activeClass}`).classList.remove(activeClass);
+  } else {
+    engagements.forEach(engagement => {
+      engagement.style.display = "block";
+      if (engagement.dataset.tag.indexOf(tag) > -1) {
+        engagement.style.display = "none";
+      }
+    });
+  }
+};
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", e => {
+    console.log("clicked");
+    if (window.location.pathname === "/les-idees.html") {
+      const activeBtn = document.querySelector(`.${activeClass}`);
+      const isTargetActive =
+        Array.prototype.slice.call(e.target.classList).indexOf(activeClass) >
+        -1;
+
+      if (activeBtn) {
+        activeBtn.classList.remove(activeClass);
+      }
+      e.target.classList.toggle(activeClass);
+      filterEngagements(e.target.dataset.tag, isTargetActive);
+    } else {
+      window.location.assign(`les-idees.html?${e.target.dataset.tag}`);
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.search !== "") {
+    const tag = window.location.search.split("?")[1];
+    filterEngagements(tag, false);
+  }
+});

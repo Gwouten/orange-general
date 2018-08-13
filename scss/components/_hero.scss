@@ -1,9 +1,19 @@
 .hero {
+  animation: slideHero 5s forwards alternate 1 ease-out;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   height: 20rem;
-  
-  @include screen(tab-port){
+
+  @include screen(tab-port) {
     height: 40rem;
+  }
+}
+
+@keyframes slideHero {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: center;
   }
 }

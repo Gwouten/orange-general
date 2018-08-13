@@ -3,3 +3,5 @@
 
 #ignore node_modules folder and all subfolders:
 node_modules/
+
+config.json

@@ -45,6 +45,7 @@
       &:before {
         display: none;
         @include screen(tab-port) {
+          content: "";
           display: block;
           @include center;
           background: url(../assets/img/arrow.svg) center 60% $col-primary;

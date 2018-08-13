@@ -55,7 +55,7 @@
 </head>
 
 
-<body id="top-of-page">
+<body id="top-of-page" data-current="Les idées">
 
   <!--=include header.html -->
 
@@ -69,57 +69,7 @@
       <h2 class="breadcrumb__header">Nos engagements humanistes</h2>
     </section>
 
-    <section class="filter">
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="family">Enseignement
-          <br>Famille
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="health">Santé
-          <br>Recherche
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="energy">Énergie
-          <br>Écologie
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="economy">Emploi
-          <br>Économie
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="mobility">Mobilité
-          <br>Transport
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="housing">Logement
-          <br>Aménagement
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="justice">Sécurité
-          <br>Justice
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="culture">Culture
-          <br>Sport
-        </button>
-      </div>
-
-    </section>
-
+    <!--=include engagements-filter.html -->
 
     <section class="intro u-wrapper">
       <p class="intro__text">
@@ -165,7 +115,7 @@
           <str class='u-strong'>travail et sphère privée</str>
         </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="mobility">
+      <a href="mobilite-inteligente.html" class="engagements__item" data-tag="mobility">
         <h2 class="engagements__header">Une
           <str class='u-strong'>mobilité</str> intelligente</h2>
       </a>
@@ -184,8 +134,8 @@
       </a>
     </section>
 
-    <section class="u-wrapper">
-      <div class="newsfeed">
+    <section class="u-wrapper u-wrapper--wide">
+      <div class="newsfeed newsfeed--footer carousel">
 
         <a href="#" class="newsfeed__item newsfeed__item--media">
           <img src="/assets/img/5038585.jpg" alt="" class="newsfeed__image">
@@ -214,6 +164,21 @@
           <h4 class="newsfeed__header">
             <span class="newsfeed__date">26 mai 2018</span>Pot du Doudou</h4>
         </a>
+
+        <a href="#" class="newsfeed__item newsfeed__item--vidéo newsfeed__item--enseignement">
+          <img src="/assets/img/Comment-voter_largeur_760.jpg" alt="" class="newsfeed__image">
+          <p class="newsfeed__date"></p>
+          <h4 class="newsfeed__header">
+            <span class="newsfeed__date">15 mars 2018</span>Comment voter le 14 octobre</h4>
+        </a>
+
+        <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--économie">
+          <img src="/assets/img/938289146.jpg" alt="" class="newsfeed__image">
+          <p class="newsfeed__date"></p>
+          <h4 class="newsfeed__header">
+            <span class="newsfeed__date">14 mars 2018</span>Défendre les spécificités des ASBL</h4>
+        </a>
+
       </div>
 
     </section>
@@ -225,7 +190,7 @@
   <script src="js/filter.js"></script>
   <script src="js/bundle.js"></script>
   <script>
-    siema("carousel--engagements-filter", false, true, 12000, 2, 4, 8);
+    siema("newsfeed--footer", true, true, 12000, 2, 3, 4);
   </script>
 </body>
 

@@ -20,7 +20,8 @@
     "upload:styling": "run-s babel sass package-styling upload-css upload-js",
     "upload": "gulp upload",
     "removeRemoteDirectory": "gulp removeRemoteDirectory",
-    "upload:prod": "run-s removeLocalDistFolder babel sass include package imagemin upload"
+    "upload:prod": "run-s removeLocalDistFolder babel sass include package imagemin upload",
+    "upload:dev": "run-s removeLocalDistFolder babel sass include package upload"
   },
   "unused": {},
   "author": "Wouter Deloof",

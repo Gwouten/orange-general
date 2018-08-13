@@ -1,0 +1,50 @@
+.subnav {
+  background-color: $col-secondary;
+  padding: 0 1rem;
+  @include screen(tab-port) {
+    padding: 0 5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 25%;
+    border-left: 2px solid $col-white;
+    transform: skew($skew);
+    transition: background-color 0.2s;
+
+    &:last-of-type {
+      border-right: 2px solid $col-white;
+    }
+
+    &:hover,
+    &--active {
+      background-color: $col-grey;
+    }
+  }
+  &__link {
+    color: $col-white;
+    display: block;
+    padding: 2rem 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: center;
+    transform: skew($anti-skew);
+    width: 100%;
+    @include screen(tab-port) {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      color: $col-white;
+    }
+  }
+}

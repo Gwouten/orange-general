@@ -8,7 +8,7 @@
     text-align: left;
     margin-bottom: $margin-m;
   }
-  
+
   &--grey {
     background-color: $col-grey;
   }
@@ -16,6 +16,7 @@
   &--faders {
     &:before,
     &:after {
+      content: "";
       position: absolute;
       top: 0;
       height: 100%;
@@ -27,6 +28,7 @@
     }
 
     &:before {
+      content: "";
       left: 0;
       background: linear-gradient(
         to right,
@@ -36,6 +38,7 @@
     }
 
     &:after {
+      content: "";
       right: 0;
       background: linear-gradient(
         to left,
@@ -128,6 +131,7 @@
     position: relative;
 
     &:before {
+      content: "";
       border-right: 2px solid $col-white;
       position: absolute;
       top: 0;

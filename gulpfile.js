@@ -13,12 +13,13 @@ const gutil = require("gulp-util");
 const ftp = require("vinyl-ftp");
 const concat = require("gulp-concat");
 const include = require("gulp-include");
+const ftpConfig = require("./config.json");
 
 // FTP config
-var user = "lescommuua"; /*process.env.FTP_USER;*/
-var password = "mhC4GUQV4qs2"; /*process.env.FTP_PWD;*/
-var host = "ftp.cluster026.hosting.ovh.net";
-var port = 21;
+var user = ftpConfig.ftpUser; /*process.env.FTP_USER;*/
+var password = ftpConfig.ftpPass; /*process.env.FTP_PWD;*/
+var host = ftpConfig.ftpHost;
+var port = ftpConfig.ftpPort;
 var localFilesGlob = ["./dist/**/*"];
 var remoteFolder = "/dev2/";
 
@@ -129,7 +130,12 @@ gulp.task("concat", function() {
 
 gulp.task("extra-scripts", function() {
   return gulp
-    .src(["src/js/twitter.js", "src/js/safari-font-fix.js", "src/js/filter.js"])
+    .src([
+      "src/js/twitter.js",
+      "src/js/safari-font-fix.js",
+      "src/js/filter.js",
+      "src/js/oembed.js"
+    ])
     .pipe(gulp.dest("js"))
     .pipe(gzip())
     .pipe(gulp.dest("js"));

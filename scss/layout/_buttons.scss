@@ -49,6 +49,7 @@
     &:before,
     &:after {
       @include center;
+      content: "";
       display: block;
       width: 2rem;
       height: 2px;
@@ -58,12 +59,14 @@
       transition: background-color 0.2s;
     }
     &:after {
+      content: "";
       transform: translate(-50%, -50%) rotate(-45deg);
     }
 
     &:hover {
       &:before,
       &:after {
+        content: "";
         background-color: $col-secondary;
       }
     }
@@ -71,6 +74,7 @@
     &:active {
       &:before,
       &:after {
+        content: "";
         background-color: $col-primary;
       }
     }
@@ -81,6 +85,7 @@
 
       &:before,
       &:after {
+        content: "";
         width: 1.5rem;
       }
     }
