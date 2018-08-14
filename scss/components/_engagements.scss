@@ -73,7 +73,7 @@
     &__header {
       font-style: normal;
       font-size: 3rem;
-      border-bottom: 4px dotted $col-black;
+      border-bottom: $dotted;
       padding-bottom: $padding-m;
     }
     &__list {

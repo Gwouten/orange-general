@@ -68,6 +68,10 @@
   }
 }
 
+.u-align-center {
+  text-align: center !important;
+}
+
 .u-table-wrapper {
   margin-top: $margin-m;
   margin-bottom: $margin-l;
@@ -106,4 +110,10 @@
   display: block;
   font-size: 200%;
   text-transform: uppercase;
+}
+
+.u-dotted {
+  border-top: $dotted;
+  padding-top: $padding-m;
+  margin-bottom: $margin-m;
 }

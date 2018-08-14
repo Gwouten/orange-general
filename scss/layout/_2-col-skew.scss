@@ -1,6 +1,6 @@
 .two-col-skew {
   width: 100%;
-  height: 52rem;
+  height: 36rem;
   @include screen(tab-port) {
     height: 26rem;
   }
@@ -97,7 +97,7 @@
   }
 
   &__skewed {
-    height: 50%;
+    height: 26rem;
     width: 100%;
     text-align: center;
     @include screen(tab-port) {
@@ -189,9 +189,9 @@
         font-family: $font-nav;
         font-size: 1.8rem;
         font-weight: 600;
-        margin-bottom: 2rem;
+        margin-top: 1rem;
         @include screen(tab-port) {
-          margin-bottom: 1rem;
+          font-size: 2rem;
           text-align: left;
         }
 
@@ -236,14 +236,13 @@
         background-size: cover;
         left: 50%;
         position: absolute;
-        top: 0;
-        transform: translate(-50%, 0);
-        width: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 110%;
 
         @include screen(tab-port) {
           height: auto;
-          width: 110%;
-          transform: translate3d(-50%, 0%, 0) skew($anti-skew);
+          transform: translate3d(-50%, -50%, 0) skew($anti-skew);
         }
 
         &.align-top {
@@ -263,6 +262,13 @@
 
     &:last-of-type {
       float: right;
+    }
+
+    & + .two-col-skew__skewed {
+      height: 10rem;
+      @include screen(tab-port) {
+        height: 100%;
+      }
     }
   }
 }

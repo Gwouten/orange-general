@@ -1,0 +1,76 @@
+.portrait-gallery {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: $dotted;
+  padding-bottom: $padding-m;
+
+  & + .portrait-gallery {
+    border-top: $dotted;
+  }
+
+  &__portrait {
+    color: $col-white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+    width: 20rem;
+
+    &:after {
+      background: linear-gradient(
+        to top,
+        rgba($col-black, 0.5) 0%,
+        rgba($col-black, 0) 50%
+      );
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+
+    &:hover {
+      box-shadow: $shadow-regular;
+      transform: translateY(-0.5rem);
+
+      & .portrait-gallery__portrait__name,
+      & .portrait-gallery__portrait__position {
+        color: $col-white;
+        text-shadow: $shadow-near;
+        transform: translateY(-0.5rem);
+      }
+    }
+
+    &__image {
+      @include center;
+      height: 105%;
+    }
+
+    &__name,
+    &__position {
+      position: relative;
+      transition: text-shadow 0.2s, transform 0.2s;
+      z-index: 1;
+    }
+
+    &__name {
+      font-size: 2rem;
+    }
+
+    &__position {
+      font-size: 1.4rem;
+      margin: 0;
+      font-style: italic;
+    }
+  }
+}

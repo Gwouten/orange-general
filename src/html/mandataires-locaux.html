@@ -55,69 +55,60 @@
 </head>
 
 
-<body id="top-of-page" data-current="le cdh,l'humanisme">
+<body id="top-of-page" data-current="qui est qui,les mandataires locaux">
 
     <!--=include header.html -->
 
+    <!--=include qui-est-qui-subnav.html -->
+
+
     <main>
 
-        <!--=include le-cdh-subnav.html -->
-
         <section class="breadcrumb u-wrapper">
-            <h4 class="breadcrumb__trail">Le cdH &#10142; L'humanisme</h4>
+            <h4 class="breadcrumb__trail">Qui est qui &#10142; Les mandataires locaux</h4>
         </section>
 
-        <section class="
-            two-col-skew">
+        <section class="u-wrapper u-wrapper--wide">
+            <h1 class="text-content__title">Bourgmestres, Échevins, Conseillers communaux, de CPAS et de Police</h1>
+        </section>
+
+
+        <section class="two-col-skew candidates">
             <div class="two-col-skew__inner">
                 <div class="
-                    two-col-skew__skewed 
-                    two-col-skew__skewed--image">
-                    <img src="/assets/img/GettyImages-597317827.jpg" alt="Maison communales de Saint-Gilles" class="u-anti-skew">
+                      two-col-skew__skewed 
+                      two-col-skew__skewed--cdh">
+                    <form action="analyse.php" method="POST" class="
+                        two-col-skew--anti  ">
+                        <h2 class="two-col-skew__skewed--cdh__header u-align-center">Choisir une commune</h2>
+                        <div class="input">
+                            <input type="text" class="input__text" name="search" id="candidates-input" placeholder="Nom, commune ou code postal" data-source="all"
+                                autocomplete="off">
+                            <button type="reset" class="btn btn--input-reset"></button>
+                            <input type="submit" class="btn btn--submit" value="&nbsp;">
+                        </div>
+                    </form>
                 </div>
                 <div class="
-                    two-col-skew__skewed 
-                    two-col-skew__skewed--cdh">
-                    <div class="
-                        two-col-skew__skewed--cdh__wrapper-right
-                        two-col-skew--anti">
-                        <h2 class="two-col-skew__skewed--cdh__header">
-                            L'humanisme
-                        </h2>
-                    </div>
+                two-col-skew__skewed 
+                two-col-skew__skewed--image">
+                    <img src="assets/img/maison-communale-saint-gilles.jpg" alt="Maison communales de Saint-Gilles" title="&copy; David Edgar">
                 </div>
+
             </div>
         </section>
 
-        <section class="intro u-wrapper">
-            <p class="intro__text">
-                S’engager ellati stinciliae. Nequiam volupti
-                <str class='u-strong'>pour une société apaisée</str>. Osvolendit aliquatur,
-                <str class='u-strong'>en pleine santé</str> as voluption et odis si dest exerum re
-                <str class='u-strong'>promouvoir l’initiative</str> dolesto vendis dolorep tatibus quibusam, con net, sit ommosandem nos ressitatur.
-            </p>
-        </section>
-
-        <section class="u-wrapper text-content">
-            <p class="text-content__body">
-                On ne parle pas ici de l’individu qui vit indépendamment des autres. On ne parle pas non plus du membre anonyme d’une collectivité
-                écrasante. On parle bien de la personne humaine considérée, respectée, dans toutes ses dimensions, sociale,
-                culturelle, affective, intellectuelle et spirituelle. La personne humaine dans sa relation personnelle avec
-                les autres.
-            </p>
-            <p class="text-content__body">
-                Cette relation a pour nom la fraternité, qui fait sa grandeur et sa richesse, qui donne un sens à sa vie.
-            </p>
-        </section>
-
-
     </main>
 
+
     <!--=include footer.html -->
-    <script src="js/filter.js"></script>
+    <script src="/js/polyfill.min.js" type="text/javascript"></script>
+    <script async src="js/twitter.js" charset="utf-8"></script>
+    <script src="js/oembed.js" type="text/javascript"></script>
     <script src="js/bundle.js"></script>
     <script>
-        siema("newsfeed--footer", true, true, 12000, 2, 3, 4);
+        siema("carousel--hero", true, true, 12000, 1, 1, 1);
+
     </script>
 </body>
 

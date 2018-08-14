@@ -1,0 +1,38 @@
+%text-styles {
+  color: $col-grey;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.text-content {
+  margin-top: $margin-l;
+  margin-bottom: $margin-l;
+
+  &__title {
+    @extend %text-styles;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: $margin-m;
+    border-bottom: $dotted;
+    padding-bottom: $padding-s;
+  }
+
+  &__header {
+    @extend %text-styles;
+    font-size: 4rem;
+    margin-bottom: $margin-m;
+  }
+
+  &__subheader {
+    @extend %text-styles;
+    font-size: 2.4rem;
+    color: $col-black;
+  }
+
+  &__body {
+    margin: $margin-s 0 0 0;
+    font-size: 1.7rem;
+    line-height: 1.8;
+  }
+}

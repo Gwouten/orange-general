@@ -1,9 +1,8 @@
 .social {
   border-radius: $brad-xs;
-  margin-top: $margin-l;
-  padding: $padding-m;
-  width: calc(50% - 2.5rem);
   color: $col-white;
+  margin-top: 0;
+  padding: $padding-m;
 
   &--facebook {
     background-color: $col-facebook;

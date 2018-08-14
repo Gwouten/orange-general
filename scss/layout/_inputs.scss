@@ -10,6 +10,10 @@
     margin-right: 1rem;
   }
 
+  .two-col-skew__skewed--cdh__header + & {
+    margin-top: $margin-m;
+  }
+
   &--candidate-search {
     margin: 0 auto;
   }

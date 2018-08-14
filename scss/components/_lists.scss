@@ -1,0 +1,20 @@
+.list {
+  padding-left: $padding-xl;
+
+  &__item {
+    font-size: 1.6rem;
+    margin-top: $margin-s;
+
+    &:before {
+      content: "";
+      background: url("../assets/img/icon-bullet.svg");
+      display: block;
+      height: 3rem;
+      position: absolute;
+      width: 3rem;
+      top: -0.2rem;
+      left: -4rem;
+      transform: rotate(-0.25turn);
+    }
+  }
+}
