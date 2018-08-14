@@ -1,15 +1,21 @@
 .portrait-gallery {
   align-items: flex-start;
+  background-color: transparent;
   display: flex;
   flex-wrap: wrap;
   border-bottom: $dotted;
   padding-bottom: $padding-m;
+
+  &.carousel {
+    display: block;
+  }
 
   & + .portrait-gallery {
     border-top: $dotted;
   }
 
   &__portrait {
+    backface-visibility: hidden;
     color: $col-white;
     display: flex;
     justify-content: flex-end;
@@ -49,6 +55,10 @@
         text-shadow: $shadow-near;
         transform: translateY(-0.5rem);
       }
+    }
+
+    .carousel & {
+      margin: 1rem auto;
     }
 
     &__image {
