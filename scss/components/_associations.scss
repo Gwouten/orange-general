@@ -1,0 +1,21 @@
+.association {
+  align-items: flex-start;
+  border-bottom: $dotted;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: $margin-m;
+  padding-bottom: $padding-m;
+
+  &__img {
+    display: block;
+    height: auto;
+    margin-right: 2rem;
+    width: 25rem;
+  }
+
+  &__link {
+    color: $col-secondary;
+    font-size: 1.7rem;
+    text-decoration: none;
+  }
+}

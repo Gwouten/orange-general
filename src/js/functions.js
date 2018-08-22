@@ -91,7 +91,8 @@ function siema(
   interval = 5000,
   smallCount = 2,
   medCount = 3,
-  largeCount = 4
+  largeCount = 4,
+  startIndex = 0
 ) {
   const sliderContainer = document.querySelector(`.${element}`);
   let sliderButtons = [];

@@ -1,0 +1,23 @@
+.sidebar {
+  &__box {
+    background-color: $col-med-grey;
+    border-radius: $brad-xs;
+    margin: 0 0 $margin-m 0;
+    padding: $padding-m;
+
+    &--dark {
+      background-color: $col-grey;
+    }
+
+    &__header {
+      color: $col-white;
+      font-size: 3rem;
+      margin-top: 0;
+    }
+    &__text {
+      color: $col-white;
+      margin-top: 0;
+      font-style: italic;
+    }
+  }
+}

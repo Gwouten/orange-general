@@ -21,6 +21,10 @@
     padding-top: $padding-xl;
   }
 
+  &--actua {
+    width: 74rem;
+  }
+
   &__item {
     display: block;
     height: 15rem;
@@ -33,6 +37,12 @@
       margin: 0 1rem 2rem 0;
       height: 20rem;
       width: 20rem;
+    }
+
+    &--large {
+      height: 35rem;
+      margin-right: 2rem;
+      width: 35rem;
     }
 
     &:hover {

@@ -2,42 +2,39 @@
 const buttons = Array.prototype.slice.call(
   document.querySelectorAll(".filter__button")
 );
-
-const engagements = Array.prototype.slice.call(
-  document.querySelectorAll(".engagements__item")
+console.log(buttons);
+const filterTargets = Array.prototype.slice.call(
+  document.querySelectorAll(".filter__item")
 );
-const activeClass = "filter__button--active";
 
-const filterEngagements = (tag, isActive) => {
-  if (isActive) {
-    engagements.forEach(engagement => {
-      engagement.style.cssText = "";
-    });
-    document.querySelector(`.${activeClass}`).classList.remove(activeClass);
-  } else {
-    engagements.forEach(engagement => {
-      engagement.style.display = "block";
-      if (engagement.dataset.tag.indexOf(tag) > -1) {
-        engagement.style.display = "none";
-      }
-    });
-  }
+const filterElements = tag => {
+  filterTargets.forEach(engagement => {
+    engagement.style.display = "block";
+    if (engagement.dataset.tag.indexOf(tag) > -1) {
+      engagement.style.display = "none";
+    }
+  });
 };
 
 buttons.forEach(btn => {
   btn.addEventListener("click", e => {
-    console.log("clicked");
-    if (window.location.pathname === "/les-idees.html") {
-      const activeBtn = document.querySelector(`.${activeClass}`);
-      const isTargetActive =
-        Array.prototype.slice.call(e.target.classList).indexOf(activeClass) >
-        -1;
+    if (
+      window.location.pathname === "/les-idees.html" ||
+      window.location.pathname === "/dernieres-news.html"
+    ) {
+      const isTargetActive = e.target.control.checked;
 
-      if (activeBtn) {
-        activeBtn.classList.remove(activeClass);
+      if (isTargetActive) {
+        setTimeout(() => {
+          e.target.control.checked = false;
+        }, 100);
+
+        filterTargets.forEach(engagement => {
+          engagement.style.cssText = "";
+        });
+      } else {
+        filterElements(e.target.dataset.tag);
       }
-      e.target.classList.toggle(activeClass);
-      filterEngagements(e.target.dataset.tag, isTargetActive);
     } else {
       window.location.assign(`les-idees.html?${e.target.dataset.tag}`);
     }
@@ -45,8 +42,19 @@ buttons.forEach(btn => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.search !== "") {
-    const tag = window.location.search.split("?")[1];
-    filterEngagements(tag, false);
+  const tagFromPrevPage = window.location.search;
+  if (tagFromPrevPage !== "") {
+    // filter elements
+    const tag = tagFromPrevPage.split("?")[1];
+    filterElements(tag);
+
+    // set filter menu button active
+    buttons.forEach(btn => {
+      if (btn.dataset.tag === tag) {
+        btn.control.checked = true;
+      } else {
+        return;
+      }
+    });
   }
 });

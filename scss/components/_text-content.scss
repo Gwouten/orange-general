@@ -9,6 +9,10 @@
   margin-top: $margin-l;
   margin-bottom: $margin-l;
 
+  &--association {
+    margin: 0;
+  }
+
   &__title {
     @extend %text-styles;
     font-size: 4rem;

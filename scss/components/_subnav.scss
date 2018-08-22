@@ -9,11 +9,37 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    transform: skew($skew);
+
+    &--carousel {
+      display: block;
+      border-right: 2px solid $col-white;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 2px solid $col-white;
+        height: 100%;
+        width: 2px;
+        z-index: 1;
+      }
+    }
+
+    .carousel__next {
+      transform: skew($anti-skew) translateY(-50%) rotate(300grad);
+    }
+
+    .carousel__prev {
+      transform: skew($anti-skew) translateY(-50%) rotate(100grad);
+    }
   }
 
   &__item {
     border-left: 2px solid $col-white;
-    transform: skew($skew);
+    // border-top: none;
+    // border-bottom: none;
     transition: background-color 0.2s;
 
     &--4 {
@@ -33,6 +59,14 @@
     }
     &--active {
       background-color: $col-grey;
+    }
+
+    &--carousel {
+      border-left: 2px solid $col-white;
+      border-right: 2px solid $col-white;
+      &:last-of-type {
+        border-right: none;
+      }
     }
   }
 

@@ -1,0 +1,30 @@
+.actua-filter {
+  padding: 0.5rem 1rem;
+  background-color: $col-grey;
+  columns: 3;
+  font-size: 1.4rem;
+  color: $col-white;
+  font-weight: 600;
+  width: calc(75% - 7.7rem);
+  margin: 2px 0 0 5rem;
+  transform: skew($skew) translateX(-8px);
+
+  &__btn {
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $col-secondary;
+    }
+  }
+
+  &__radio {
+    display: none;
+
+    &:checked + label {
+      color: $col-primary;
+    }
+  }
+}
