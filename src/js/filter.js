@@ -2,16 +2,17 @@
 const buttons = Array.prototype.slice.call(
   document.querySelectorAll(".filter__button")
 );
-console.log(buttons);
+
 const filterTargets = Array.prototype.slice.call(
   document.querySelectorAll(".filter__item")
 );
-
 const filterElements = tag => {
-  filterTargets.forEach(engagement => {
-    engagement.style.display = "block";
-    if (engagement.dataset.tag.indexOf(tag) > -1) {
-      engagement.style.display = "none";
+  console.log("tag: " + tag);
+  filterTargets.forEach(target => {
+    console.log("target.dataset.tag: " + target);
+    target.style.display = "none";
+    if (target.dataset.tag.indexOf(tag) > -1) {
+      target.style.display = "block";
     }
   });
 };
