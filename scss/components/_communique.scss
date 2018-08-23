@@ -1,0 +1,75 @@
+.communique {
+  &__item {
+    border-bottom: $dotted;
+    padding: $padding-m;
+    margin-top: $margin-m;
+    width: 72rem;
+    margin-right: 2rem;
+    margin-top: 0;
+
+    &:first-of-type {
+      border-top: $dotted;
+    }
+  }
+  &__date {
+    color: $col-secondary;
+    text-transform: uppercase;
+    font-style: normal;
+    margin-bottom: $margin-s;
+  }
+  &__header {
+    color: $col-grey;
+    font-style: normal;
+    font-size: 2.6rem;
+    margin-bottom: $margin-m;
+    line-height: 1.2;
+  }
+  &__link {
+    color: $col-secondary;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:after {
+      content: ">";
+      display: inline-block;
+      transition: transform 0.2s;
+      transform: translate(-3px, 1px) scale(0.6, 1);
+      font-weight: 300;
+    }
+
+    &:hover:after {
+      transform: translate(2px, 1px) scale(0.6, 1);
+    }
+  }
+
+  &__article {
+    width: 72rem;
+    margin-right: 2rem;
+  }
+
+  &__head {
+    border-top: $dotted;
+    border-bottom: $dotted;
+    padding-top: $padding-m;
+    margin-bottom: $margin-m;
+  }
+
+  &__introduction {
+    color: $col-secondary;
+    font-weight: 600;
+    font-style: italic;
+    margin: $margin-m 0;
+  }
+
+  &__img {
+    width: 100%;
+    margin-top: $margin-m;
+  }
+
+  &__footnote {
+    padding-top: $padding-xs;
+    padding-bottom: $padding-xs;
+    border-top: $dotted-light;
+    border-bottom: $dotted-light;
+  }
+}

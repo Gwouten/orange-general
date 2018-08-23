@@ -7,9 +7,7 @@ const filterTargets = Array.prototype.slice.call(
   document.querySelectorAll(".filter__item")
 );
 const filterElements = tag => {
-  console.log("tag: " + tag);
   filterTargets.forEach(target => {
-    console.log("target.dataset.tag: " + target);
     target.style.display = "none";
     if (target.dataset.tag.indexOf(tag) > -1) {
       target.style.display = "block";
@@ -21,7 +19,8 @@ buttons.forEach(btn => {
   btn.addEventListener("click", e => {
     if (
       window.location.pathname === "/les-idees.html" ||
-      window.location.pathname === "/dernieres-news.html"
+      window.location.pathname === "/dernieres-news.html" ||
+      window.location.pathname === "/communiques.html"
     ) {
       const isTargetActive = e.target.control.checked;
 

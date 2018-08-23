@@ -232,7 +232,7 @@ const setCurrentPageIndicator = () => {
     document.querySelectorAll(".header__interior-links__item")
   );
 
-  // mark current active page in interion links menu
+  // mark current active page in interior links menu
   setActiveItem(interiorLinks, pageTags[0], "header__interior-links__item");
 
   // mark current active item in subnav menu
