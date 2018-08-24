@@ -72,13 +72,18 @@
 
     &__header {
       font-style: normal;
-      font-size: 3rem;
+      font-size: 2.6rem;
       border-bottom: $dotted;
       padding-bottom: $padding-m;
+      @include screen(tab-port) {
+        font-size: 3rem;
+      }
     }
+
     &__list {
       padding-left: $padding-xl;
     }
+
     &__item {
       font-size: 1.6rem;
       margin-top: $margin-s;

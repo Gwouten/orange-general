@@ -49,6 +49,7 @@
 
       &:checked {
         & + .subscribe__checkbox__label:before {
+          content: "";
           background-color: $col-white;
           display: inline-block;
           height: 0.6rem;
