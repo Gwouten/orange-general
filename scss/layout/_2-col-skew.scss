@@ -24,64 +24,6 @@
     }
   }
 
-  &--small {
-    height: 36rem;
-    @include screen(tab-port) {
-      height: 18rem;
-    }
-  }
-
-  &--large {
-    height: 55rem;
-    @include screen(tab-port) {
-      height: 40rem;
-    }
-  }
-
-  &--narrow {
-    margin-top: 0rem;
-    height: 10rem;
-    .two-col-skew__skewed--cdh {
-      background-position-x: -10rem;
-      @include screen(tab-port) {
-        background-size: 110%;
-        background-position-x: 0;
-      }
-    }
-    .two-col-skew__skewed:first-of-type {
-      width: 100%;
-      @include screen(tab-port) {
-        width: 70%;
-      }
-    }
-    .two-col-skew__skewed:last-of-type {
-      width: 100%;
-      @include screen(tab-port) {
-        width: 30%;
-      }
-    }
-    .two-col-skew__skewed--cdh__header {
-      margin: 0;
-    }
-  }
-
-  &--commune {
-    @include screen(phone) {
-      height: 39rem;
-    }
-
-    .two-col-skew__skewed--image {
-      @include screen(phone) {
-        height: 29rem;
-      }
-    }
-    .two-col-skew__skewed--cdh {
-      @include screen(phone) {
-        height: 10rem;
-      }
-    }
-  }
-
   &__inner {
     width: 100%;
     height: 100%;
@@ -105,12 +47,6 @@
       // width: calc(50% - 1px);
       transform: skewX($skew);
       text-align: center;
-    }
-
-    &--commune {
-      @include screen(phone) {
-        height: 10rem;
-      }
     }
 
     &--cdh {
@@ -139,35 +75,9 @@
         }
       }
 
-      &__wrapper-left {
-        @include screen(tab-port) {
-          left: 60%;
-        }
-      }
-
       &__wrapper-right {
         @include screen(tab-port) {
           left: 40%;
-        }
-      }
-
-      &__wrapper-commune {
-        left: 5%;
-        transform: translate(0, -50%) skewX($anti-skew);
-        width: 90%;
-        @include screen(tab-port) {
-          left: 3rem;
-          bottom: 2rem;
-          transform: translateX(0) skewX($anti-skew);
-          width: 70%;
-        }
-      }
-
-      &__wrapper-candidate {
-        @include screen(tab-port) {
-          left: calc(10% + 5rem);
-          transform: translate(0, -50%) skewX($anti-skew);
-          width: 70%;
         }
       }
 
@@ -180,28 +90,6 @@
           font-size: 4rem;
           margin-bottom: 0;
           text-align: left;
-        }
-
-        &--commune {
-          bottom: 0;
-          font-size: 3rem;
-          // width: 100vw;
-          @include screen(tab-port) {
-            font-size: 6rem;
-            margin: 0;
-            position: absolute;
-            text-align: left;
-            width: 100%;
-          }
-        }
-
-        &--firstname {
-          display: block;
-          font-size: 2rem;
-          margin-bottom: $margin-s;
-          @include screen(tab-port) {
-            font-size: 2.5rem;
-          }
         }
       }
 
@@ -219,31 +107,6 @@
         a {
           &:hover {
             color: $col-white;
-          }
-        }
-      }
-
-      &__quote {
-        color: $col-black;
-        font-weight: 600;
-        line-height: 1.2;
-        padding-left: 3rem;
-        text-align: left;
-        margin-top: $margin-m;
-        @include screen(tab-port) {
-          font-size: 2rem;
-          margin-top: $margin-l;
-          padding-left: 4rem;
-        }
-        &:before {
-          content: "“";
-          position: absolute;
-          top: -1rem;
-          left: 0;
-          font-size: 7rem;
-          @include screen(tab-port) {
-            top: -1.4rem;
-            font-size: 10rem;
           }
         }
       }

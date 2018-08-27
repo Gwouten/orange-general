@@ -14,6 +14,7 @@ const ftp = require("vinyl-ftp");
 const concat = require("gulp-concat");
 const include = require("gulp-include");
 const ftpConfig = require("./config.json");
+const checkCSS = require("gulp-check-unused-css");
 
 // FTP config
 var user = ftpConfig.ftpUser; /*process.env.FTP_USER;*/
@@ -211,4 +212,10 @@ gulp.task("include", function() {
         stream: true
       })
     );
+});
+
+gulp.task("unusedCss", () => {
+  return gulp
+    .src(["./css/*.css", "./*.html"])
+    .pipe(checkCSS({ ignore: ["awesomplete"] }));
 });

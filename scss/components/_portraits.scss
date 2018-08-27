@@ -64,6 +64,7 @@
     &__image {
       @include center;
       height: 105%;
+      z-index: -1;
     }
 
     &__name,
