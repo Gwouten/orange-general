@@ -1,34 +1,3 @@
-class RotateSlogan {
-  constructor(phrases = [], container, timing) {
-    (this.phrases = phrases),
-      (this.container = document.querySelector(`#${container}`)),
-      (this.timing = timing),
-      (this.interval = (timing / 3) * 2),
-      (this.cycles = 0),
-      (this.numberPhrases = this.phrases.length - 1);
-  }
-  createPhrases() {
-    if (this.container) {
-      const phraseEl = document.createElement("span");
-
-      phraseEl.style.animationDuration = `${this.timing}ms`;
-      phraseEl.innerHTML = this.phrases[this.cycles];
-      phraseEl.classList.add("slogan__header__word");
-      this.container.appendChild(phraseEl);
-
-      this.cycles === this.numberPhrases ? (this.cycles = 0) : this.cycles++;
-
-      setTimeout(() => this.container.removeChild(phraseEl), this.timing);
-    }
-  }
-  rotatePhrases() {
-    this.createPhrases();
-    setInterval(() => {
-      this.createPhrases();
-    }, this.interval);
-  }
-}
-
 // Animated scrolling
 const scrollTo = function(to, duration) {
   const element = document.scrollingElement /*|| document.documentElement*/,
@@ -348,4 +317,28 @@ const toggleEngagementsProvinces = () => {
       });
     });
   }
+};
+
+// Set up the images in the header of .two-col-skew elements so they always fill their parent element proportionally, like background-size: cover
+const setImgCover = () => {
+  const images = Array.prototype.slice.call(
+    document.querySelectorAll(".two-col-skew__skewed--image img")
+  );
+
+  images.forEach(image => {
+    if (window.innerWidth > 975) {
+      const parent = image.parentNode;
+      const reductionFactor = parent.clientWidth / image.width;
+
+      if (image.height * reductionFactor < parent.clientHeight) {
+        image.style.height = "100%";
+        image.style.width = "auto";
+      } else {
+        image.style.height = "auto";
+        image.style.width = "110%";
+      }
+    } else {
+      image.style.cssText = "";
+    }
+  });
 };

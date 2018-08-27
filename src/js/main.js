@@ -3,13 +3,6 @@
 // Set current page indicator in navigation menu
 setCurrentPageIndicator();
 
-// Rotate slogan
-const phrases = ["des communes", "des provinces"];
-const headline = new RotateSlogan(phrases, "rw", 6000);
-
-headline.rotatePhrases();
-// End rotate slogan
-
 // To top button
 const toTopElement = document.querySelector(".to-top__link");
 scrollToTop(toTopElement);
@@ -77,3 +70,6 @@ cleanUrls();
 
 // Show related engagement on Province page
 toggleEngagementsProvinces();
+
+// Simulate 'background: cover' with img inside .two-col-skew__skewed--image
+window.addEventListener("load", setImgCover);
