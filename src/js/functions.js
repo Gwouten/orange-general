@@ -82,10 +82,11 @@ function siema(
       duration: 1000,
       easing: "ease-in-out",
       perPage: {
-        600: smallCount,
-        900: medCount,
-        1200: largeCount
+        0: smallCount,
+        600: medCount,
+        900: largeCount
       },
+      startIndex: startIndex,
       loop: true,
       draggable,
       onChange: setActiveButton
@@ -99,14 +100,14 @@ function siema(
         nextButton.classList.add("btn--carousel");
         nextButton.classList.add("carousel__next");
         nextButton.classList.add(`${element}__next`);
-        sliderContainer.appendChild(nextButton);
+        sliderContainer.parentElement.appendChild(nextButton);
 
         const prevButton = document.createElement("button");
         prevButton.classList.add("btn");
         prevButton.classList.add("btn--carousel");
         prevButton.classList.add("carousel__prev");
         prevButton.classList.add(`${element}__prev`);
-        sliderContainer.appendChild(prevButton);
+        sliderContainer.parentElement.appendChild(prevButton);
 
         // callback to bind functionality to buttons
         slider.bindButtons(element);

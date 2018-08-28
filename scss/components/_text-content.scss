@@ -15,11 +15,14 @@
 
   &__title {
     @extend %text-styles;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: $margin-m;
     border-bottom: $dotted;
     padding-bottom: $padding-s;
+    @include screen(tab-port) {
+      font-size: 4rem;
+    }
   }
 
   &__header {

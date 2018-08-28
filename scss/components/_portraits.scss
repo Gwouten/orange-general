@@ -1,10 +1,15 @@
 .portrait-gallery {
   align-items: flex-start;
   background-color: transparent;
+  border-bottom: $dotted;
   display: flex;
   flex-wrap: wrap;
-  border-bottom: $dotted;
-  padding-bottom: $padding-m;
+  padding-bottom: $padding-s;
+  margin-bottom: $margin-m;
+  justify-content: center;
+  @include screen(tab-port) {
+    justify-content: flex-start;
+  }
 
   &.carousel {
     display: block;
@@ -27,7 +32,10 @@
     overflow: hidden;
     text-decoration: none;
     transition: box-shadow 0.2s, transform 0.2s;
-    width: 20rem;
+    width: 100%;
+    @include screen(tab-port) {
+      width: 20rem;
+    }
 
     &:after {
       background: linear-gradient(

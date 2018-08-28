@@ -16,9 +16,22 @@
   // newsfeed at the bottom of other pages
   &--footer {
     background-color: transparent;
-    border-top: 2px dashed $col-black;
+    border-top: $dotted;
     display: block;
     padding-top: $padding-xl;
+
+    &__prev,
+    &__next {
+      top: calc((100% + 2.5rem) / 2);
+    }
+
+    &__prev {
+      left: 0.75rem;
+    }
+
+    &__next {
+      right: 0.75rem;
+    }
   }
 
   &--actua {
@@ -32,7 +45,7 @@
     overflow: hidden;
     position: relative;
     transition: box-shadow 0.2s, transform 0.2s;
-    width: 40%;
+    width: 95%;
     @include screen(tab-port) {
       margin: 0 1rem 2rem 0;
       height: 20rem;
