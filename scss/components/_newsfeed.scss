@@ -27,10 +27,16 @@
 
     &__prev {
       left: 0.75rem;
+      @include screen(tab-port) {
+        left: 3rem;
+      }
     }
 
     &__next {
       right: 0.75rem;
+      @include screen(tab-port) {
+        right: 3rem;
+      }
     }
   }
 
