@@ -233,15 +233,31 @@
   }
 
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, calc(16rem * 16 / 9));
+      grid-auto-rows: 16rem;
+      grid-gap: 2rem;
+      justify-content: center;
+      flex-wrap: unset;
+    }
   }
 
   &__item {
-    margin: 0 0.5rem;
+    margin: 1rem;
 
     .youtube {
       display: block;
-      padding-top: 55%;
-      cursor: pointer;
+      height: 16rem;
+      width: calc(16rem * 16 / 9);
+
+      @supports (display: grid) {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

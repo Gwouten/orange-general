@@ -25,10 +25,12 @@
   }
 
   &__inner {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
     @include screen(tab-port) {
-      display: flex;
+      flex-direction: row;
       width: 110%;
       transform: translateX(-5%);
     }
@@ -61,6 +63,13 @@
         }
       }
 
+      &--form {
+        height: 15rem !important;
+        @include screen(tab-port) {
+          height: 100% !important;
+        }
+      }
+
       &--bumper {
         display: none;
         @include screen(tab-port) {
@@ -83,12 +92,11 @@
 
       &__header {
         margin-top: 0;
-        margin-bottom: $margin-s;
-        font-size: 2.6rem;
+        margin-bottom: 0;
+        font-size: 1.8rem;
         text-align: center;
         @include screen(tab-port) {
-          font-size: 4rem;
-          margin-bottom: 0;
+          font-size: 3rem;
           text-align: left;
         }
       }
@@ -148,8 +156,8 @@
       }
     }
 
-    &:last-of-type {
-      float: right;
-    }
+    // &:last-of-type {
+    //   float: right;
+    // }
   }
 }

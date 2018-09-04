@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>cdH - Les Communales 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon code -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--
+    NEW CSS for Iphone X (accommodates 'safe zone' for area with camera)
+
+    for margin, padding or absolute positioned top & left:
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+
+    -->
+    <meta name="keywords" content="index">
+    <meta name="description" content="index">
+    <!-- Open Graph info https://developers.facebook.com/docs/sharing/webmasters#markup -->
+    <meta property="og:url" content="canonical url" />
+    <meta property="og:title" content="title on Facebook" />
+    <meta property="og:description" content="description on Facebook" />
+    <meta property="og:image" content="url to image on Facebook" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:locale:alternate" content="nl_be" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/safari-font-fix.js"></script>
+    <script>
+        window.__gcfg = {
+            parseTags: "onload"
+        }
+    </script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+</head>
+
+
+<body id="top-of-page" data-current="l'actualité, vidéos">
+
+    <div class="privacy">
+        <div>
+            <p class="privacy__text">En cliquant sur OK, vous acceptez la
+                <a href='disclaimer.html'>politique de protection de la vie privée</a> du cdH.</p>
+            <button class="privacy__btn">OK</button>
+        </div>
+    </div>
+    
+    <div class="to-top">
+        <a href="#top-of-page" class="to-top__link"></a>
+    </div>
+    
+    <header class="header">
+    
+        <input type="checkbox" class="header__checkbox" id="nav-toggle">
+    
+        <a href="index.html" class="header__logo--mobile">
+            <img class="header__logo--mobile__image" src="./assets/img/header-logo.svg" alt="cdH Logo - Les Provinciales 2018">
+        </a>
+    
+        <label class="header__toggle-button" for="nav-toggle">
+            <span class="header__toggle-button__icon"></span>
+        </label>
+        <div class="header__expander"></div>
+    
+        <div class="header__wrapper">
+    
+            <a href="index.html" class="header__link-logo">
+                <img src="./assets/img/header-logo.svg" alt="cdH Logo" class="header__logo">
+                <h1 class="header__title">Les choix sont en nous.</h1>
+            </a>
+    
+            <nav class="social-links social-links--top">
+                <ul>
+                    <li class="social-links__item social-links__item--extra">
+                        <a href="#" class="social-links__link">Nos sites</a>
+                    </li>
+                    <li class="social-links__item social-links__item--extra">
+                        <a href="#" class="social-links__link">Presse</a>
+                    </li>
+                    <li class="social-links__item social-links__item--extra">
+                        <a href="http://www.lecdh.be/content/formulaire-de-contact" class="social-links__link">Contact</a>
+                    </li>
+                    <li class="social-links__item social-links__item--extra">
+                        <a href="http://phl.lecdh.be/WD230AWP/WD230Awp.exe/CONNECT/MyCDH" class="social-links__link">My cdH</a>
+                    </li>
+                    <li class="social-links__item social-links__item--extra">
+                        <a href="#" class="social-links__link">Extranet</a>
+                    </li>
+                    <li class="social-links__item social-links__item--search">
+                        <form action="" class="social-links__search">
+                            <input type="text" class="input input__text input__text--search" placeholder="recherche">
+                            <button type="reset" class="btn btn--input-reset btn--input-reset--small"></button>
+                            <input type="submit" class="btn btn--submit btn--submit--small" value="&nbsp;">
+                        </form>
+                    </li>
+    
+                    <li class="social-links__item social-links__item--facebook">
+                        <a href="https://www.facebook.com/lecdh/" class="social-links__link social-links__link--social" target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-facebook.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--twitter">
+                        <a href="https://twitter.com/lecdh" class="social-links__link social-links__link--social" target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-twitter.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--youtube">
+                        <a href="https://www.youtube.com/channel/UCyWzxFwSjimeXzQuLqtnS9g" class="social-links__link social-links__link--social"
+                            target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-youtube.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--instagram">
+                        <a href="https://www.instagram.com/centredemocratehumaniste/" class="social-links__link social-links__link--social" target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-instagram.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--linkedin">
+                        <a href="https://fr.linkedin.com/company/centre-d%C3%A9mocrate-humaniste" class="social-links__link social-links__link--social"
+                            target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-linkedin.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item">&nbsp;</li>
+    
+                </ul>
+            </nav>
+    
+            <nav class="header__interior-links-wrapper">
+                <ul class="header__interior-links">
+                    <li class="header__interior-links__item">
+                        <a href="index.html" class="header__interior-links__link">Accueil</a>
+                    </li>
+                    <li class="header__interior-links__item">
+                        <a href="lhumanisme.html" class="header__interior-links__link">Le cdH</a>
+                    </li>
+    
+                    <li class="header__interior-links__item">
+                        <a href="les-idees.html" class="header__interior-links__link">Les idées</a>
+                    </li>
+                    <li class="header__interior-links__item">
+                        <a href="presidence.html" class="header__interior-links__link">Qui est qui</a>
+                    </li>
+                    <li class="header__interior-links__item">
+                        <a href="dernieres-news.html" class="header__interior-links__link">L'actualité</a>
+                    </li>
+                    <li class="header__interior-links__item">
+                        <a href="http://phl.lecdh.be/WD230AWP/WD230Awp.exe/CONNECT/CDH_NouveauMembre" class="header__interior-links__link u-orange">Adhérer</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+    </header>
+
+    <nav class="subnav">
+        <ul class="subnav__list">
+            <li class="subnav__item subnav__item--4">
+                <a href="dernieres-news.html" class="subnav__link">Dernières news</a>
+            </li>
+            <li class="subnav__item subnav__item--4">
+                <a href="communiques.html" class="subnav__link">Communiqués</a>
+            </li>
+            <li class="subnav__item subnav__item--4">
+                <a href="videos.html" class="subnav__link">Vidéos</a>
+            </li>
+            <li class="subnav__item subnav__item--4">
+                <a href="gouvernance.html" class="subnav__link">Agenda</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="actua-filter">
+        <input id="act-radio-1" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-1" data-tag="economy">
+            Emploi / Economie
+        </label>
+    
+        <input id="act-radio-2" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-2" data-tag="mobility">
+            Mobilité / Transport
+        </label>
+    
+        <input id="act-radio-3" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-3" data-tag="family">
+            Enseignement / famille
+        </label>
+    
+        <input id="act-radio-4" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-4" data-tag="health">
+            Santé / Recherche
+        </label>
+    
+        <input id="act-radio-5" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-5" data-tag="housing">
+            Logement / Aménagement
+        </label>
+    
+        <input id="act-radio-6" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-6" data-tag="justice">
+            Sécurité / Police/ Justice
+        </label>
+    
+        <input id="act-radio-7" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-7" data-tag="culture">
+            Culture / Sport
+        </label>
+    
+        <input id="act-radio-8" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-8" data-tag="energy">
+            énergie / écologie
+        </label>
+    </nav>
+
+    <section class="breadcrumb u-wrapper">
+        <h4 class="breadcrumb__trail">L'actualité &#10142; Vidéos</h4>
+    </section>
+
+    <main class="yt-container">
+        <section class="video-hero">
+            <div class="u-wrapper u-section-split u-section-split--no-bottom-margin">
+                <div class="video-hero__video-container">
+                    <a data-href="https://www.youtube.com/watch?v=fZL1NKMvmeI" class="youtube youtube-hero"></a>
+                </div>
+
+                <div class="video-hero__info">
+                    <h1 class="video-hero__header"></h1>
+                    <p class="video-hero__date"></p>
+                    <p class="video-hero__description"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-list u-wrapper">
+            <h3 class="video-list__header">
+                Vidéos
+            </h3>
+
+            <ul class="carousel carousel--youtube video-list__list">
+                <li class="video-list__item" data-tag="family">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=hzprNedVMAg"></a>
+                </li>
+                <li class="video-list__item" data-tag="energy">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=09E9Evgzn_c"></a>
+                </li>
+                <li class="video-list__item" data-tag="family">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=gHuTnkMKLKQ"></a>
+                </li>
+                <li class="video-list__item" data-tag="mobility">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=PodHe-JlBEQ"></a>
+                </li>
+                <li class="video-list__item" data-tag="energy">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=OJUtffqxcvk"></a>
+                </li>
+                <li class="video-list__item" data-tag="family">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=tjFiaTDovKE"></a>
+                </li>
+                <li class="video-list__item" data-tag="economy">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=kJIj5BtW7Zk"></a>
+                </li>
+                <li class="video-list__item" data-tag="family">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=r01QuDxABs0"></a>
+                </li>
+                <li class="video-list__item" data-tag="family">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=A1uAqjfpl3Y"></a>
+                </li>
+                <li class="video-list__item" data-tag="mobility">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=0KNxXcNPpWs"></a>
+                </li>
+                <li class="video-list__item" data-tag="mobility">
+                    <a class="youtube" data-href="https://www.youtube.com/watch?v=0KNxXcNPpWs"></a>
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+    
+        <div class="footer__copyright">&copy; centre démocrate humaniste - 2018 -
+            <a href="disclaimer.html">Disclaimer</a>
+    
+            <nav class="social-links social-links--bottom">
+                <ul>
+                    <li class="social-links__item social-links__item--facebook">
+                        <a href="https://www.facebook.com/lecdh/" class="social-links__link social-links__link--social" target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-facebook.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--twitter">
+                        <a href="https://twitter.com/lecdh" class="social-links__link social-links__link--social" target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-twitter.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--youtube">
+                        <a href="https://www.youtube.com/channel/UCyWzxFwSjimeXzQuLqtnS9g" class="social-links__link social-links__link--social"
+                            target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-youtube.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--instagram">
+                        <a href="https://www.instagram.com/centredemocratehumaniste/" class="social-links__link social-links__link--social" target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-instagram.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item social-links__item--linkedin">
+                        <a href="https://fr.linkedin.com/company/centre-d%C3%A9mocrate-humaniste" class="social-links__link social-links__link--social"
+                            target="_blank">
+                            <img class="social-links__icon" src="assets/img/icon-sprite-linkedin.svg">
+                        </a>
+                    </li>
+                    <li class="social-links__item">&nbsp;</li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="u-wrapper">
+            <div class="footer__cols">
+                <div class="footer__cols__col">
+                    <h3 class="footer__header">Groupes parlementaires</h3>
+                    <a href="http://lecdh.be/">Groupe cdH au Parlement fédéral</a>
+                    <a href="http://lecdh.be/">Groupe cdH au Parlement de Wallonie</a>
+                    <a href="http://lecdh.be/">Groupe cdH au Parlement de la Fédération Wallonie-Bruxelles</a>
+                    <a href="http://lecdh.be/">Groupe cdH au Parlement bruxellois</a>
+                </div>
+    
+                <div class="footer__cols__col">
+                    <form action="" class="subscribe">
+                        <h3 class="subscribe__header">Inscrivez-vous</h3>
+                        <div class="subscribe__checkboxes">
+                            <div class="subscribe__checkbox">
+                                <input type="checkbox" class="subscribe__checkbox__checkbox" name "newsletter" id="newsletter">
+                                <label for="newsletter" class="subscribe__checkbox__label">Newsletter</label>
+                            </div>
+                            <div class="subscribe__checkbox">
+                                <input type="checkbox" class="subscribe__checkbox__checkbox" name "communique" id="communique">
+                                <label for="communique" class="subscribe__checkbox__label">Communiqués</label>
+                            </div>
+                        </div>
+                        <div class="subscribe__text-input">
+                            <input type="email" class="input__text" placeholder="Votre email">
+                            <input type="submit" class="btn btn--submit" value="&nbsp;">
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="footer__cols__col">
+                    <h3 class="footer__header">Nos coordonnées</h3>
+                    <p class="footer__text">Rue des Deux Eglises, 41 - 1000 Bruxelles
+                        <br/> tél: 02/238 01 11
+                        <br/> fax: 02/238 01 11
+                        <br/>mail: info@lecdh.be</p>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    </footer>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="js/youtube.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>cdH - Les Communales 2018</title>
+  <title>cdH - Les idées</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -55,7 +55,7 @@
 </head>
 
 
-<body id="top-of-page">
+<body id="top-of-page" data-current="Les idées">
 
   <div class="privacy">
       <div>
@@ -152,17 +152,17 @@
                       <a href="index.html" class="header__interior-links__link">Accueil</a>
                   </li>
                   <li class="header__interior-links__item">
-                      <a href="#" class="header__interior-links__link">Le cdH</a>
+                      <a href="lhumanisme.html" class="header__interior-links__link">Le cdH</a>
                   </li>
   
                   <li class="header__interior-links__item">
                       <a href="les-idees.html" class="header__interior-links__link">Les idées</a>
                   </li>
                   <li class="header__interior-links__item">
-                      <a href="#" class="header__interior-links__link">Qui est qui</a>
+                      <a href="presidence.html" class="header__interior-links__link">Qui est qui</a>
                   </li>
                   <li class="header__interior-links__item">
-                      <a href="#" class="header__interior-links__link">L'actualité</a>
+                      <a href="dernieres-news.html" class="header__interior-links__link">L'actualité</a>
                   </li>
                   <li class="header__interior-links__item">
                       <a href="http://phl.lecdh.be/WD230AWP/WD230Awp.exe/CONNECT/CDH_NouveauMembre" class="header__interior-links__link u-orange">Adhérer</a>
@@ -183,170 +183,186 @@
       <h2 class="breadcrumb__header">Nos engagements humanistes</h2>
     </section>
 
-    <section class="filter">
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="family">Enseignement
-          <br>Famille
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="health">Santé
-          <br>Recherche
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="energy">Énergie
-          <br>Écologie
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="economy">Emploi
-          <br>Économie
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="mobility">Mobilité
-          <br>Transport
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="housing">Logement
-          <br>Aménagement
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="justice">Sécurité
-          <br>Justice
-        </button>
-      </div>
-
-      <div class="filter__skew">
-        <button class="filter__button" data-tag="culture">Culture
-          <br>Sport
-        </button>
-      </div>
-
+    <section class="engagements-filter">
+        <div class="engagements-filter__skew">
+            <input id="radio-1" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-1" class="engagements-filter__button filter__button" data-tag="family">Enseignement
+                <br>Famille
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-2" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-2" class="engagements-filter__button filter__button" data-tag="health">Santé
+                <br>Recherche
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-3" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-3" class="engagements-filter__button filter__button" data-tag="energy">Énergie
+                <br>Écologie
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-4" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-4" class="engagements-filter__button filter__button" data-tag="economy">Emploi
+                <br>Économie
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-5" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-5" class="engagements-filter__button filter__button" data-tag="mobility">Mobilité
+                <br>Transport
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-6" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-6" class="engagements-filter__button filter__button" data-tag="housing">Logement
+                <br>Aménagement
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-7" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-7" class="engagements-filter__button filter__button" data-tag="justice">Sécurité
+                <br>Justice
+            </label>
+        </div>
+    
+        <div class="engagements-filter__skew">
+            <input id="radio-8" type="radio" name="engagements-radio" class="engagements-filter__radio">
+            <label for="radio-8" class="engagements-filter__button filter__button" data-tag="culture">Culture
+                <br>Sport
+            </label>
+        </div>
+    
     </section>
-
 
     <section class="intro u-wrapper">
       <p class="intro__text">
         S’engager ellati stinciliae. Nequiam volupti
         <str class='u-strong'>pour une société apaisée</str>. Osvolendit aliquatur,
         <str class='u-strong'>en pleine santé</str> as voluption et odis si dest exerum re
-        <str class='u-strong'>promouvoir l’initiative</str> dolesto vendis dolorep tatibus quibusam, con net, sit ommosandem nos ressitatur.
+        <str class='u-strong'>promouvoir l’initiative</str> dolesto vendis dolorep tatibus quibusam, con net, sit ommosandem
+        nos ressitatur.
       </p>
     </section>
 
     <section class="engagements u-wrapper">
-      <a href="#" class="engagements__item" data-tag="family culture mobility">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture mobility">
         <h2 class="engagements__header">Une
-          <str class='u-strong'>citoyenneté</str> humaine et responsable</h2>
+          <str class='u-strong'>citoyenneté</str> humaine et responsable
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="health">
+      <a href="#" class="engagements__item filter__item" data-tag="health">
         <h2 class="engagements__header">Une
-          <str class='u-strong'>intégration</str> active</h2>
+          <str class='u-strong'>intégration</str> active
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="mobility culture">
+      <a href="#" class="engagements__item filter__item" data-tag="mobility culture">
         <h2 class="engagements__header">Une
-          <str class='u-strong'>justice</str> déterminée et constructive</h2>
+          <str class='u-strong'>justice</str> déterminée et constructive
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family culture">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture">
         <h2 class="engagements__header">Promotion de la
           <str class='u-strong'>justice fiscale</str>
         </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="justice">
+      <a href="#" class="engagements__item filter__item" data-tag="justice">
         <h2 class="engagements__header">Une
-          <str class='u-strong'>gouvernance publique</str> transparente et efficace</h2>
+          <str class='u-strong'>gouvernance publique</str> transparente et efficace
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family culture">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture">
         <h2 class="engagements__header">La
-          <str class='u-strong'>santé</str> dans mon assiette</h2>
+          <str class='u-strong'>santé</str> dans mon assiette
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family mobility">
+      <a href="#" class="engagements__item filter__item" data-tag="family mobility">
         <h2 class="engagements__header">Une
-          <str class='u-strong'>écologie</str> des actes concrets</h2>
+          <str class='u-strong'>écologie</str> des actes concrets
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family culture">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture">
         <h2 class="engagements__header">Un meilleur équilibre entre
           <str class='u-strong'>travail et sphère privée</str>
         </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="mobility">
+      <a href="mobilite-inteligente.html" class="engagements__item filter__item" data-tag="mobility">
         <h2 class="engagements__header">Une
-          <str class='u-strong'>mobilité</str> intelligente</h2>
+          <str class='u-strong'>mobilité</str> intelligente
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family culture">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture">
         <h2 class="engagements__header">Des soins de santé dans le respect de la
           <str class='u-strong'>cohésion sociale</str>
         </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family culture">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture">
         <h2 class="engagements__header">Un
-          <str class='u-strong'>enseignement</str> d’excellence pour chacun</h2>
+          <str class='u-strong'>enseignement</str> d’excellence pour chacun
+        </h2>
       </a>
-      <a href="#" class="engagements__item" data-tag="family culture">
+      <a href="#" class="engagements__item filter__item" data-tag="family culture">
         <h2 class="engagements__header">Anticipation des
-          <str class='u-strong'>mutations du monde du travail</str> et plein emploi</h2>
+          <str class='u-strong'>mutations du monde du travail</str> et plein emploi
+        </h2>
       </a>
     </section>
 
     <section class="u-wrapper u-wrapper--wide">
-      <div class="newsfeed newsfeed--footer carousel">
-
-        <a href="#" class="newsfeed__item newsfeed__item--media">
-          <img src="/assets/img/5038585.jpg" alt="" class="newsfeed__image">
-          <p class="newsfeed__date"></p>
-          <h4 class="newsfeed__header">
-            <span class="newsfeed__date">22 mai 2018</span>Beniot Lutgen sur RTL-TVI</h4>
-        </a>
-
-        <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--transport">
-          <img src="/assets/img/560e23ee35700fb92f5dd136.jpg" alt="" class="newsfeed__image">
-          <p class="newsfeed__date"></p>
-          <h4 class="newsfeed__header">
-            <span class="newsfeed__date">25 avril 2018</span>Non à la taxe kilométrique pour les voitures</h4>
-        </a>
-
-        <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--famille">
-          <img src="/assets/img/GettyImages-700237852.jpg" alt="" class="newsfeed__image">
-          <p class="newsfeed__date"></p>
-          <h4 class="newsfeed__header">
-            <span class="newsfeed__date">29 mars 2018</span>Allocations familiales: 150 euros pour tous les enfants à Bruxelles</h4>
-        </a>
-
-        <a href="#" class="newsfeed__item newsfeed__item--agenda newsfeed__item--famille">
-          <img src="/assets/img/potdoudou5.JPG" alt="" class="newsfeed__image">
-          <p class="newsfeed__date"></p>
-          <h4 class="newsfeed__header">
-            <span class="newsfeed__date">26 mai 2018</span>Pot du Doudou</h4>
-        </a>
-
-        <a href="#" class="newsfeed__item newsfeed__item--vidéo newsfeed__item--enseignement">
-          <img src="/assets/img/Comment-voter_largeur_760.jpg" alt="" class="newsfeed__image">
-          <p class="newsfeed__date"></p>
-          <h4 class="newsfeed__header">
-            <span class="newsfeed__date">15 mars 2018</span>Comment voter le 14 octobre</h4>
-        </a>
-
-        <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--économie">
-          <img src="/assets/img/938289146.jpg" alt="" class="newsfeed__image">
-          <p class="newsfeed__date"></p>
-          <h4 class="newsfeed__header">
-            <span class="newsfeed__date">14 mars 2018</span>Défendre les spécificités des ASBL</h4>
-        </a>
-
-      </div>
-
+        <div class="newsfeed newsfeed--footer carousel">
+    
+            <a href="#" class="newsfeed__item newsfeed__item--media">
+                <img src="/assets/img/5038585.jpg" alt="" class="newsfeed__image">
+                <p class="newsfeed__date"></p>
+                <h4 class="newsfeed__header">
+                    <span class="newsfeed__date">22 mai 2018</span>Beniot Lutgen sur RTL-TVI</h4>
+            </a>
+    
+            <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--transport">
+                <img src="/assets/img/560e23ee35700fb92f5dd136.jpg" alt="" class="newsfeed__image">
+                <p class="newsfeed__date"></p>
+                <h4 class="newsfeed__header">
+                    <span class="newsfeed__date">25 avril 2018</span>Non à la taxe kilométrique pour les voitures</h4>
+            </a>
+    
+            <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--famille">
+                <img src="/assets/img/GettyImages-700237852.jpg" alt="" class="newsfeed__image">
+                <p class="newsfeed__date"></p>
+                <h4 class="newsfeed__header">
+                    <span class="newsfeed__date">29 mars 2018</span>Allocations familiales: 150 euros pour tous les enfants à Bruxelles</h4>
+            </a>
+    
+            <a href="#" class="newsfeed__item newsfeed__item--agenda newsfeed__item--famille">
+                <img src="/assets/img/potdoudou5.JPG" alt="" class="newsfeed__image">
+                <p class="newsfeed__date"></p>
+                <h4 class="newsfeed__header">
+                    <span class="newsfeed__date">26 mai 2018</span>Pot du Doudou</h4>
+            </a>
+    
+            <a href="#" class="newsfeed__item newsfeed__item--vidéo newsfeed__item--enseignement">
+                <img src="/assets/img/Comment-voter_largeur_760.jpg" alt="" class="newsfeed__image">
+                <p class="newsfeed__date"></p>
+                <h4 class="newsfeed__header">
+                    <span class="newsfeed__date">15 mars 2018</span>Comment voter le 14 octobre</h4>
+            </a>
+    
+            <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--économie">
+                <img src="/assets/img/938289146.jpg" alt="" class="newsfeed__image">
+                <p class="newsfeed__date"></p>
+                <h4 class="newsfeed__header">
+                    <span class="newsfeed__date">14 mars 2018</span>Défendre les spécificités des ASBL</h4>
+            </a>
+    
+        </div>
+    
     </section>
-
 
   </main>
 
@@ -413,7 +429,7 @@
                           </div>
                       </div>
                       <div class="subscribe__text-input">
-                          <input type="text" class="input__text" placeholder="Votre email">
+                          <input type="email" class="input__text" placeholder="Votre email">
                           <input type="submit" class="btn btn--submit" value="&nbsp;">
                       </div>
                   </form>

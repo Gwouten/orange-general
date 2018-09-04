@@ -1,22 +1,22 @@
 .portrait-gallery {
-  align-items: flex-start;
   background-color: transparent;
   border-bottom: $dotted;
-  display: flex;
-  flex-wrap: wrap;
   padding-bottom: $padding-s;
   margin-bottom: $margin-m;
-  justify-content: center;
-  @include screen(tab-port) {
-    justify-content: flex-start;
-  }
 
-  &.carousel {
-    display: block;
+  .gallery-wrapper:last-of-type & {
+    border-bottom: none;
   }
 
   & + .portrait-gallery {
     border-top: $dotted;
+  }
+
+  &--no-slider {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   &__portrait {
@@ -32,7 +32,7 @@
     overflow: hidden;
     text-decoration: none;
     transition: box-shadow 0.2s, transform 0.2s;
-    width: 100%;
+    width: 95%;
     @include screen(tab-port) {
       width: 20rem;
     }

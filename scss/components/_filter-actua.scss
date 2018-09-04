@@ -11,12 +11,16 @@
 
   &__btn {
     cursor: pointer;
-    display: block;
+    display: none;
     text-decoration: none;
     transition: color 0.2s;
 
     &:hover {
       color: $col-secondary;
+    }
+
+    &--present {
+      display: block;
     }
   }
 

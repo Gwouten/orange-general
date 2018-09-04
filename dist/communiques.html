@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>cdH - Les Communales 2018</title>
+    <title>cdH - Communiqués</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -55,7 +55,7 @@
 </head>
 
 
-<body id="top-of-page" data-current="qui est qui,présidence">
+<body id="top-of-page" data-current="l'actualité, communiqués">
 
     <div class="privacy">
         <div>
@@ -159,7 +159,7 @@
                         <a href="les-idees.html" class="header__interior-links__link">Les idées</a>
                     </li>
                     <li class="header__interior-links__item">
-                        <a href="la-presidence.html" class="header__interior-links__link">Qui est qui</a>
+                        <a href="presidence.html" class="header__interior-links__link">Qui est qui</a>
                     </li>
                     <li class="header__interior-links__item">
                         <a href="dernieres-news.html" class="header__interior-links__link">L'actualité</a>
@@ -173,165 +173,183 @@
     
     </header>
 
+    <nav class="subnav">
+        <ul class="subnav__list">
+            <li class="subnav__item subnav__item--4">
+                <a href="dernieres-news.html" class="subnav__link">Dernières news</a>
+            </li>
+            <li class="subnav__item subnav__item--4">
+                <a href="communiques.html" class="subnav__link">Communiqués</a>
+            </li>
+            <li class="subnav__item subnav__item--4">
+                <a href="videos.html" class="subnav__link">Vidéos</a>
+            </li>
+            <li class="subnav__item subnav__item--4">
+                <a href="gouvernance.html" class="subnav__link">Agenda</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="actua-filter">
+        <input id="act-radio-1" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-1" data-tag="economy">
+            Emploi / Economie
+        </label>
+    
+        <input id="act-radio-2" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-2" data-tag="mobility">
+            Mobilité / Transport
+        </label>
+    
+        <input id="act-radio-3" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-3" data-tag="family">
+            Enseignement / famille
+        </label>
+    
+        <input id="act-radio-4" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-4" data-tag="health">
+            Santé / Recherche
+        </label>
+    
+        <input id="act-radio-5" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-5" data-tag="housing">
+            Logement / Aménagement
+        </label>
+    
+        <input id="act-radio-6" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-6" data-tag="justice">
+            Sécurité / Police/ Justice
+        </label>
+    
+        <input id="act-radio-7" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-7" data-tag="culture">
+            Culture / Sport
+        </label>
+    
+        <input id="act-radio-8" type="radio" name="actua-radio" class="actua-filter__radio">
+        <label class="actua-filter__btn filter__button" for="act-radio-8" data-tag="energy">
+            énergie / écologie
+        </label>
+    </nav>
     <main>
 
-        <nav class="subnav">
-            <ul class=" subnav__list subnav__list--carousel">
-                <li class="subnav__item subnav__item--carousel">
-                    <a href="la-presidence.html" class="subnav__link subnav__link--large">Présidence</a>
-                </li>
-                <li class="subnav__item subnav__item--carousel">
-                    <a href="les-ministres.html" class="subnav__link subnav__link--large">Ministres et secrétaires d'Etat</a>
-                </li>
-                <li class="subnav__item subnav__item--carousel">
-                    <a href="#" class="subnav__link subnav__link--large">Les chef(fe)s de groupe</a>
-                </li>
-                <li class="subnav__item subnav__item--carousel">
-                    <a href="les-parlementaires.html" class="subnav__link subnav__link--large">Parlementaires</a>
-                </li>
-                <li class="subnav__item subnav__item--carousel">
-                    <a href="les-mandataires-locaux.html" class="subnav__link subnav__link--large">Dans les Provinces<br/><span class="subnav__link__subtitle">Conseillers
-                            et députés provinciaux</span></a>
-                </li>
-                <li class="subnav__item subnav__item--carousel">
-                    <a href="les-mandataires-locaux.html" class="subnav__link subnav__link--large">Dans les communes<br/><span class="subnav__link__subtitle">Bourgmestres,
-                            Échevins, Conseillers communaux, Présidents de CPAS et nos équipes locales</span></a>
-                </li>
-            </ul>
-        </nav>
-
         <section class="breadcrumb u-wrapper">
-            <h4 class="breadcrumb__trail">Qui est qui &#10142; La présidence</h4>
+            <h4 class="breadcrumb__trail">Actualité &#10142; Communiqués</h4>
         </section>
 
-        <section class="u-wrapper u-wrapper--wide">
-            <h1 class="text-content__title">La présidence</h1>
-        </section>
+        <section class="u-section-split u-section-split--centered">
 
-        <section class="two-col-skew">
-            <div class="two-col-skew__inner">
-                <div class="
-                two-col-skew__skewed
-                two-col-skew__skewed--cdh
-                two-col-skew__skewed--cdh--bumper"></div>
-                <div class="
-                two-col-skew__skewed
-                two-col-skew__skewed--image">
-                    <img src="/assets/img/5038585.jpg" alt="">
+            <div class="communique">
+
+                <div class="communique__item filter__item" data-tag="family">
+                    <h4 class="communique__date">
+                        02 juillet 2018 - RÉFUGIÉS DE GUERRE ET ASILE
+                    </h4>
+                    <h2 class="communique__header">
+                        25 Propositions pour une politique européenne cohérente, équitable et fraternelle
+                    </h2>
+                    <p class="text-content__body">
+                        En marge du sommet de l’Union européenne qui aura lieu ces 28 et 29 juin, le cdH, en collaboration avec le CEPESS (Centre
+                        d’Etudes Politiques, Economiques et Sociales), propose
+                        <str class='u-strong u-strong--black'>25 mesures pour refonder la politique d’asile et d’accueil
+                            de réfugiés de guerre</str>. Des propositions pragmatiques, qui n’ont de sens que dans un cadre
+                        européen, et qui doivent être équitables et fraternelles, car, par respect pour les femmes et des
+                        hommes en situation de fragilité…
+                        <a href="communique-article-1.html" class="communique__link">
+                            En savoir plus
+                        </a>
+                    </p>
                 </div>
-                <div class="
-                two-col-skew__skewed
-                two-col-skew__skewed--cdh">
-                    <div class="two-col-skew__skewed--cdh__wrapper-right two-col-skew--anti">
-                        <h1 class="two-col-skew__skewed--cdh__header">
-                            Benoit Lutgen
-                        </h1>
-                        <h2 class="two-col-skew__skewed--cdh__subheader">Président</h2>
+
+                <div class="communique__item filter__item" data-tag="security">
+                    <h4 class="communique__date">
+                        25 juin 2018 - question de Christian Brotcorne, Député cdH, à Koen Geens
+                    </h4>
+                    <h2 class="communique__header">
+                        Après le temps de l’émotion, le temps de l’action. Le cdh réclame la prise de mesures par rapport aux détenus radicalisés
+                    </h2>
+                    <p class="text-content__body">
+                        Christian Brotcorne, Député cdH, interroge ce lundi après-midi Koen Geens en Commission de la Justice de la Chambre afin
+                        de faire toute la lumière sur le suivi des détenus radicalisés.
+                        <a href="communique-article-2.html" class="communique__link">
+                            En savoir plus
+                        </a>
+                    </p>
+                </div>
+
+                <div class="communique__item filter__item" data-tag="family">
+                    <h4 class="communique__date">
+                        30 juin 2018 - Projet de loi de block
+                    </h4>
+                    <h2 class="communique__header">
+                        Le projet de loi de block est inutile et dangereux pour les travailleurs, les indépendants et les associations. Il est encore
+                        temps de l’arrêter!
+                    </h2>
+                    <p class="text-content__body">
+                        Emos dolorest, nonsece repudi tem utate sunt rempore pudaepta imus, seque consequaspe nim non commodi andanisqui aut eos
+                        maximod quid magnati dolut fuga. Nequam in porem. Erumque nihil ium dia que nobitin vendis simuscia
+                        qui disim et ad et aliquo te laceptaturis…
+                        <a href="#" class="communique__link">
+                            En savoir plus
+                        </a>
+                    </p>
+                </div>
+
+                <div class="communique__item filter__item" data-tag="family">
+                    <h4 class="communique__date">
+                        25 juin 2018 - question de Christian Brotcorne, Député cdH, à Koen Geens
+                    </h4>
+                    <h2 class="communique__header">
+                        Après le temps de l’émotion, le temps de l’action. Le cdh réclame la prise de mesures par rapport aux détenus radicalisés.
+                    </h2>
+                    <p class="text-content__body">
+                        Christian Brotcorne, Député cdH, interroge ce lundi après-midi Koen Geens en Commission de la Justice de la Chambre afin
+                        de faire toute la lumière sur le suivi des détenus radicalisés.
+                        <a href="#" class="communique__link">
+                            En savoir plus
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+
+                <div class="sidebar__box sidebar__box--dark">
+                    <h1 class="sidebar__box__header u-orange">Contact Presse</h1>
+                    <p class="sidebar__box__text">
+                        Nom Prénom
+                    </p>
+                    <p class="sidebar__box__text">
+                        Tél.: 02/238 01 11
+                    </p>
+                    <p class="sidebar__box__text">
+                        e-mail: NomPrénom@lecdh.be
+                    </p>
+                </div>
+
+                <div class="sidebar__box">
+                    <h1 class="sidebar__box__header">Archives</h1>
+                    <form action="">
+                        <input type="text" class="input__text">
+                        <input type="submit" class="btn btn--submit" value="&nbsp;">
+                    </form>
+                </div>
+
+                <div class="social social--narrow social--twitter">
+                    <h2 class="social__header social__header--twitter">Twitter</h2>
+                    <div class="twitter-feed__wrapper">
+                        <a class="twitter-timeline" href="https://twitter.com/lecdh" data-chrome="noheader" data-dnt="true" data-tweet-limit="3">Tweets
+                            by cdH</a>
                     </div>
+                    <button class="btn btn--twitter"></button>
                 </div>
             </div>
-        </section>
 
-        <section class="intro u-wrapper">
-            <p class="intro__text">
-                <str class='u-strong'>Benoît Lutgen</str> vellati stinciliae. Nequiam volupti officat est quam fuga. Ossuntiis
-                re volendit aliquatur, as voluption et odis si dest exerum re dolesto vendis dolorep tatibus quibusam, con
-                net, sit ommosandem nos ressitatur.
-            </p>
-        </section>
-
-        <section class="u-wrapper text-content">
-            <p class="text-content__body">
-                Benoît LUTGEN a pris ses fonctions de Président le 1 septembre 2011. Benoît LUTGEN a quitté son poste de Ministre, le 15
-                décembre 2011, et a désigné
-                <str class='u-strong u-strong--black'>Carlo Di Antonio</str> pour lui succéder au sein du Gouvernement wallon.
-                Depuis, Benoît LUTGEN a pris ses fonctions de Député à la Chambre des Représentants.
-            </p>
-            <p class="text-content__body">
-                Lors des élections locales du 14 octobre 2012, il est élu bourgmestre de Bastogne.
-            </p>
-            <p class="text-content__body">
-                Le 27 avril 2013, en tant que Président du cdH, il fait adopter le texte du Développement Humain. Il s’agit de la charpente
-                de l’action politique humaniste pour les quinze années à venir.
-            </p>
-            <p class="text-content__body">
-                Benoît LUTGEN dispose de
-                <str class='u-strong u-strong--black'>son staff personnel</str>, des équipes du cdH et du
-                <str class='u-strong u-strong--black'>CEPESS</str> (le centre d’études du cdH) pour accompagner sa dynamique
-                de développement de la politique du Centre Démocrate Humaniste.
-            </p>
-            <p class="text-content__body">
-                Pour porter le manifeste du développement humain dans la société contemporaine, concrétiser les idées et les projets du parti,
-                le Président est entouré des parlementaires et des ministres, de l’ensemble des mandataires locaux (conseillers
-                et députés provinciaux, conseillers communaux et de CPAS, bourgmestres, échevins et présidents de CPAS),
-                des présidents et des membres des comités des structures internes du cdH, des responsables des Femmes, des
-                Jeunes et des Aînés du cdH ainsi que de l’ensemble des membres.
-            </p>
-        </section>
-
-        <section class="u-wrapper text-content">
-            <h2 class="text-content__subheader u-dotted">Le bureau politique</h2>
-            <p class="text-content__body">
-                Excea vellati stinciliae. Nequiam volupti officat est quam fuga. Ossuntiis re volendit aliquatur, as voluption et odis si
-                dest exerum re dolesto vendis dolorep tatibus quibusam, con net, sit, ommosandem nos ressitatur. Dantiorestior
-                as enihilitas idipsapit accust hiliquo saperorio dit pro odignat emporiti utatusdandi od que omnimil magnimp
-                erumet aut voluptatiae venda.
-            </p>
-            <p class="text-content__body">
-                nt eos doloribus ex et, conserr ovitistio eumqui aut endi rem velisitas dignatem. Haris rectatur? Piento deliquo verepro
-                ipiet landae voluptas assinctium aces iuntibus aut ium ra que earum asperro ma quiam cumendae verro est es
-                ne nem. Et facit occaeria am accatum autem aut et facerum experum quodioris suntur, sus nonsers.
-            </p>
-        </section>
-
-        <section class="u-wrapper u-wrapper--wide">
-            <div class="newsfeed newsfeed--footer carousel">
-        
-                <a href="#" class="newsfeed__item newsfeed__item--media">
-                    <img src="/assets/img/5038585.jpg" alt="" class="newsfeed__image">
-                    <p class="newsfeed__date"></p>
-                    <h4 class="newsfeed__header">
-                        <span class="newsfeed__date">22 mai 2018</span>Beniot Lutgen sur RTL-TVI</h4>
-                </a>
-        
-                <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--transport">
-                    <img src="/assets/img/560e23ee35700fb92f5dd136.jpg" alt="" class="newsfeed__image">
-                    <p class="newsfeed__date"></p>
-                    <h4 class="newsfeed__header">
-                        <span class="newsfeed__date">25 avril 2018</span>Non à la taxe kilométrique pour les voitures</h4>
-                </a>
-        
-                <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--famille">
-                    <img src="/assets/img/GettyImages-700237852.jpg" alt="" class="newsfeed__image">
-                    <p class="newsfeed__date"></p>
-                    <h4 class="newsfeed__header">
-                        <span class="newsfeed__date">29 mars 2018</span>Allocations familiales: 150 euros pour tous les enfants à Bruxelles</h4>
-                </a>
-        
-                <a href="#" class="newsfeed__item newsfeed__item--agenda newsfeed__item--famille">
-                    <img src="/assets/img/potdoudou5.JPG" alt="" class="newsfeed__image">
-                    <p class="newsfeed__date"></p>
-                    <h4 class="newsfeed__header">
-                        <span class="newsfeed__date">26 mai 2018</span>Pot du Doudou</h4>
-                </a>
-        
-                <a href="#" class="newsfeed__item newsfeed__item--vidéo newsfeed__item--enseignement">
-                    <img src="/assets/img/Comment-voter_largeur_760.jpg" alt="" class="newsfeed__image">
-                    <p class="newsfeed__date"></p>
-                    <h4 class="newsfeed__header">
-                        <span class="newsfeed__date">15 mars 2018</span>Comment voter le 14 octobre</h4>
-                </a>
-        
-                <a href="#" class="newsfeed__item newsfeed__item--communiqué newsfeed__item--économie">
-                    <img src="/assets/img/938289146.jpg" alt="" class="newsfeed__image">
-                    <p class="newsfeed__date"></p>
-                    <h4 class="newsfeed__header">
-                        <span class="newsfeed__date">14 mars 2018</span>Défendre les spécificités des ASBL</h4>
-                </a>
-        
             </div>
-        
-        </section>
+
+
+
 
     </main>
 
@@ -501,12 +519,13 @@
     
 
     </footer>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script async src="js/twitter.js" charset="utf-8"></script>
-    <script src="js/oembed.js" type="text/javascript"></script>
+    <script src="js/filter.js"></script>
     <script src="js/bundle.js"></script>
     <script>
-        siema("subnav__list--carousel", false, true, 12000, 1, 3, 4);
-        siema("newsfeed--footer", true, true, 12000, 2, 3, 4);
+        siema("carousel--hero", true, true, 12000, 1, 1, 1);
+
     </script>
 </body>
 

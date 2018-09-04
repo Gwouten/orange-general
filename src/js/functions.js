@@ -66,6 +66,19 @@ function siema(
   const sliderContainer = document.querySelector(`.${element}`);
   let sliderButtons = [];
 
+  // If there are not enough items to fill a gallery, stop Siema function and return: no gallery will be created
+  if (
+    (window.innerWidth <= 600 &&
+      sliderContainer.childElementCount < smallCount) ||
+    (window.innerWidth <= 900 &&
+      sliderContainer.childElementCount < medCount) ||
+    (window.innerWidth > 900 && sliderContainer.childElementCount < largeCount)
+  ) {
+    sliderContainer.classList.add("portrait-gallery--no-slider");
+    sliderContainer.classList.remove("carousel");
+    return;
+  }
+
   function setActiveButton() {
     if (sliderButtons.length) {
       const activeClass = "carousel--pagination__button--fill";
@@ -123,16 +136,13 @@ function siema(
       };
 
       slider.createButtons(element);
-      window.addEventListener("resize", () => {
-        slider.createButtons();
-      });
     } else {
       // setup pagination buttons
       Siema.prototype.addPagination = function() {
         const innerElements = Array.prototype.slice.call(this.innerElements);
         const buttonContainer = document.createElement("div");
         buttonContainer.classList.add("carousel--pagination__buttons");
-        sliderContainer.appendChild(buttonContainer);
+        sliderContainer.parentElement.appendChild(buttonContainer);
 
         innerElements.forEach((innerElement, i) => {
           const pageButton = document.createElement("button");
@@ -342,4 +352,56 @@ const setImgCover = () => {
       image.style.cssText = "";
     }
   });
+};
+
+// Get all classes
+const getClasses = () => {
+  const body = document.querySelector("body");
+  const allElements = Array.prototype.slice.call(body.querySelectorAll("*"));
+  const uniqueClasses = [];
+  const all = allElements
+    .map(element => {
+      if (
+        (!uniqueClasses.includes(element.classList.value) &&
+          element.classList.value.length) ||
+        !undefined
+      ) {
+        return element.classList.value;
+      }
+    })
+    .filter(element => element.length);
+
+  // console.log(all);
+};
+getClasses();
+window.addEventListener("click", getClasses);
+
+// Add items to filterbar
+const setActuaFilterBarItems = () => {
+  if (document.querySelector(".actua-filter")) {
+    const categories = [
+      "economy",
+      "mobility",
+      "family",
+      "health",
+      "housing",
+      "justice",
+      "culture",
+      "energy"
+    ];
+
+    categories.forEach(category => {
+      if (
+        document.querySelectorAll(`.newsfeed > [data-tag~=${category}]`)
+          .length ||
+        document.querySelectorAll(`.communique > [data-tag~=${category}]`)
+          .length ||
+        document.querySelectorAll(`.video-list [data-tag~=${category}]`).length
+      ) {
+        document
+          .querySelector(`.actua-filter > [data-tag~=${category}]`)
+          .classList.add("actua-filter__btn--present");
+      }
+    });
+  }
 };

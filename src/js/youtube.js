@@ -143,7 +143,9 @@ const createVidBox = (data, publicationDate, videoUrl) => {
   gapi.ytsubscribe.render(ytSubscribeContainer, ytSubscribeOptions);
 };
 
-siema("video-list__list", false, false);
+// if (document.querySelector(".video-list__list")) {
+//   siema("video-list__list", false, false);
+// }
 const yt_api_key = "AIzaSyAXUGrOIVhDVVhldzfuPfTha2TDdolKMQk";
 const videos = Array.prototype.slice.call(
   document.querySelectorAll(".youtube")

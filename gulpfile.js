@@ -78,7 +78,7 @@ gulp.task("sass", function() {
     .src("scss/**/*.scss")
     .pipe(sass())
     .on("error", sass.logError)
-    .pipe(autoprefix())
+    .pipe(autoprefix({ grid: true }))
     .pipe(cleanCSS())
     .pipe(gulp.dest("css"))
     .pipe(gzip())
@@ -119,7 +119,6 @@ gulp.task("concat", function() {
       "src/js/siema.min.js",
       "src/js/awesomplete.js",
       "src/js/functions.js",
-      // "src/js/youtube.js",
       "src/js/privacy.js",
       "src/js/main.js"
     ])
@@ -132,6 +131,7 @@ gulp.task("concat", function() {
 gulp.task("extra-scripts", function() {
   return gulp
     .src([
+      "src/js/youtube.js",
       "src/js/twitter.js",
       "src/js/safari-font-fix.js",
       "src/js/filter.js",

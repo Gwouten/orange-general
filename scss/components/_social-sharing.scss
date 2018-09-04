@@ -1,0 +1,12 @@
+.social-sharing {
+  border: $dotted;
+  border-left: none;
+  border-right: none;
+  padding-top: $padding-s;
+  padding-bottom: $padding-s;
+
+  &__header {
+    font-size: 2.5rem;
+    margin-bottom: $margin-s;
+  }
+}

@@ -52,8 +52,8 @@ if (inputCandidatesElement !== null) {
     request.open(
       "GET",
       window.location.protocol === "https:"
-        ? "https://dev2.lescommunales2018.be/generate_all.php" // for production, replace 'dev2' with 'www"
-        : "http://dev2.lescommunales2018.be/generate_all.php", // for production, replace 'dev2' with 'www"
+        ? "https://dev2.lescommunales2018.be/generate_all.php"
+        : "http://dev2.lescommunales2018.be/generate_all.php",
       true
     );
     request.send();
@@ -73,3 +73,6 @@ toggleEngagementsProvinces();
 
 // Simulate 'background: cover' with img inside .two-col-skew__skewed--image
 window.addEventListener("load", setImgCover);
+
+// Add items to filterbar => RUN THIS FUNCTION WHEN LOADING MORE NEWS ITEMS ONTO THE PAGE HAS FINISHED
+setActuaFilterBarItems();
