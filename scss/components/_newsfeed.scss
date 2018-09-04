@@ -5,8 +5,16 @@
   flex-wrap: wrap;
   width: 100%;
   @include screen(tab-port) {
-    margin: 0;
+    margin: 0 2rem 0 0;
     justify-content: flex-start;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      // grid-template-rows: 15rem;
+      grid-auto-rows: 20rem;
+    }
   }
 
   &:before {
@@ -56,6 +64,11 @@
       margin: 0 1rem 2rem 0;
       height: 20rem;
       width: 20rem;
+
+      @supports (display: grid) {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     &--large {
