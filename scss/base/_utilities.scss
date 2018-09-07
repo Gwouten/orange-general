@@ -36,7 +36,11 @@
   }
 
   &--centered {
-    justify-content: center;
+    align-items: center;
+    @include screen(tab-port) {
+      align-items: flex-start;
+      justify-content: center;
+    }
   }
 }
 

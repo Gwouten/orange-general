@@ -116,6 +116,7 @@ gulp.task("babel", ["concat", "extra-scripts"], function() {
 gulp.task("concat", function() {
   return gulp
     .src([
+      "src/js/modernizr-grid.js",
       "src/js/siema.min.js",
       "src/js/awesomplete.js",
       "src/js/functions.js",

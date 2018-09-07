@@ -1,19 +1,27 @@
 .newsfeed {
   display: flex;
   justify-content: space-evenly;
-  margin: $margin-m 0;
+  margin: $margin-s;
+  padding: 0 $padding-xs;
   flex-wrap: wrap;
   width: 100%;
   @include screen(tab-port) {
+    padding: 0;
     margin: 0 2rem 0 0;
     justify-content: flex-start;
+  }
 
-    @supports (display: grid) {
-      display: grid;
+  .cssgrid & {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-auto-rows: 15rem;
+    grid-gap: 1rem;
+    margin: 0;
+    padding: 0 $padding-s;
+    @include screen(tab-port) {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-auto-rows: 35rem;
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      // grid-template-rows: 15rem;
-      grid-auto-rows: 20rem;
     }
   }
 
@@ -48,10 +56,6 @@
     }
   }
 
-  &--actua {
-    width: 74rem;
-  }
-
   &__item {
     display: block;
     height: 15rem;
@@ -64,11 +68,11 @@
       margin: 0 1rem 2rem 0;
       height: 20rem;
       width: 20rem;
+    }
 
-      @supports (display: grid) {
-        height: 100%;
-        width: 100%;
-      }
+    .cssgrid & {
+      height: 100%;
+      width: 100%;
     }
 
     &--large {
@@ -147,7 +151,7 @@
 
   &__date {
     display: inline-block;
-    font-size: 65%;
+    font-size: 55%;
     font-style: italic;
     margin-bottom: $margin-xs;
     width: 100%;
@@ -166,7 +170,7 @@
     text-shadow: $shadow-near;
     transition: transform 0.2s;
     @include screen(tab-port) {
-      font-size: 1.8rem;
+      font-size: 2.8rem;
     }
 
     .newsfeed__item:hover & {
