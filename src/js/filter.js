@@ -1,4 +1,4 @@
-// // Engagements filter
+// Engagements filter
 const buttons = Array.prototype.slice.call(
   document.querySelectorAll(".filter__button")
 );
@@ -18,9 +18,9 @@ const filterElements = tag => {
 buttons.forEach(btn => {
   btn.addEventListener("click", e => {
     if (
-      window.location.pathname === "/les-idees.html" ||
-      window.location.pathname === "/dernieres-news.html" ||
-      window.location.pathname === "/communiques.html"
+      window.location.pathname === "/idees" ||
+      window.location.pathname === "/dernieres-news" ||
+      window.location.pathname === "/communiques"
     ) {
       const isTargetActive = e.target.control.checked;
 
@@ -36,7 +36,9 @@ buttons.forEach(btn => {
         filterElements(e.target.dataset.tag);
       }
     } else {
-      window.location.assign(`les-idees.html?${e.target.dataset.tag}`);
+      window.location.assign(
+        `${window.location.origin}/idees?${e.target.dataset.tag}`
+      );
     }
   });
 });

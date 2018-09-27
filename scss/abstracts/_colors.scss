@@ -1,0 +1,27 @@
+// Colors
+$col-primary: #f7a600;
+$col-secondary: #e86b28;
+$col-tertiary: #ad4547;
+$col-white: #fff;
+$col-black: #222;
+$col-grey: #606060;
+$col-light-grey: lighten($col-grey, 60%);
+$col-med-grey: lighten($col-grey, 40%);
+$col-dark-grey: darken($col-grey, 30%);
+
+$col-cdh: url("../assets/img/orange-bg.jpg") 70% 60% no-repeat;
+$col-youtube: #fb3d00;
+$col-facebook: #3b629b;
+$col-twitter: #0bb8ff;
+$col-linkedin: #007ab5;
+$col-instagram: url("../assets/img/instagram-bg.jpg");
+
+$col-famille: #eb5e09;
+$col-sante: #ff0000;
+$col-ecologie: #add647;
+$col-emploi: #f7a600;
+$col-transport: #413f8a;
+$col-logement: #ad4447;
+$col-securite: #90908e;
+$col-culture: #1cc6f2;
+$colors: #eb5e09, #ff0000, #add647, #f7a600, #413f8a, #ad4447, #90908e, #1cc6f2;

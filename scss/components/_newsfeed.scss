@@ -36,6 +36,10 @@
     display: block;
     padding-top: $padding-xl;
 
+    .cssgrid & {
+      display: block;
+    }
+
     &__prev,
     &__next {
       top: calc((100% + 2.5rem) / 2);
@@ -53,6 +57,11 @@
       @include screen(tab-port) {
         right: 3rem;
       }
+    }
+
+    .cssgrid & .newsfeed__item {
+      height: 20rem;
+      width: 20rem;
     }
   }
 

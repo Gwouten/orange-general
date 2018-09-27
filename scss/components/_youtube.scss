@@ -236,7 +236,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @supports (display: grid) {
+    .cssgrid & {
       display: grid;
       grid-template-columns: repeat(auto-fit, calc(16rem * 16 / 9));
       grid-auto-rows: 16rem;
