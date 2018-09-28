@@ -20,7 +20,10 @@ buttons.forEach(btn => {
     if (
       window.location.pathname === "/idees" ||
       window.location.pathname === "/dernieres-news" ||
-      window.location.pathname === "/communiques"
+      window.location.pathname === "/communiques" ||
+      window.location.pathname === "/les-idees.html" ||
+      window.location.pathname === "/dernieres-news.html" ||
+      window.location.pathname === "/communiques.html"
     ) {
       const isTargetActive = e.target.control.checked;
 

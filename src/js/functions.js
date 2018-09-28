@@ -342,7 +342,7 @@ const setImgCover = () => {
       const reductionFactor = parent.clientWidth / image.width;
 
       if (image.height * reductionFactor < parent.clientHeight) {
-        image.style.height = "100%";
+        image.style.height = "110%";
         image.style.width = "auto";
       } else {
         image.style.height = "auto";
